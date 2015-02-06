@@ -37,13 +37,13 @@
       redirectUrl: 'http://staging.referralsaasquatch.com/widget/close'
     },
     twitter: {
-      message: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName "" shareLinks.twitterShareLink)}}'
+      message: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName programDetails.referredRewardDetails.discountPercent shareLinks.twitterShareLink)}}'
     },
     mobile: {
       sharelink : '{{shareLinks.shareLink}}',
-      emailBody: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName "" shareLinks.mobileEmailShareLink)}}',
-      facebookBody: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName "" shareLinks.mobileFacebookShareLink)}}',
-      twitterBody: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName "" shareLinks.mobileTwitterShareLink)}}',
+      emailBody: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName programDetails.referredRewardDetails.discountPercent shareLinks.mobileEmailShareLink)}}',
+      facebookBody: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName programDetails.referredRewardDetails.discountPercent shareLinks.mobileFacebookShareLink)}}',
+      twitterBody: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName programDetails.referredRewardDetails.discountPercent shareLinks.mobileTwitterShareLink)}}',
       twitterShareLink : '{{shareLinks.mobileTwitterShareLink}}',
       facebookShareLink : '{{shareLinks.mobileFacebookShareLink}}',
       emailShareLink: '{{shareLinks.mobileEmailShareLink}}'
