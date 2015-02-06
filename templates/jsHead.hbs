@@ -11,14 +11,13 @@
 --}}
 
 <script type="text/javascript" charset="utf-8">
-  test = '{{programDetails.referredRewardDetails.discountPercent}}';
   window.squatch = window.squatch || {};
   window.squatch.user = {
     code: '{{user.referralCode}}',
     sharelink: '{{shareLinks.shareLink}}',
     email: {
       share : {
-        subject: '{{urlencode (stringFormat "Get %s%% off %s?" companyName "") space="%20"}}',
+        subject: '{{urlencode (stringFormat "Get %s%% off %s?" companyName programDetails.referredRewardDetails.discountPercent) space="%20"}}',
         body: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName "" shareLinks.emailShareLink) space="%20"}}',
         mailToLink: 'mailto:?subject={{urlencode (stringFormat "Get %s%% off %s?" companyName "") space="%20"}}&body={{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName "" shareLinks.emailShareLink) space="%20"}}',
       },
