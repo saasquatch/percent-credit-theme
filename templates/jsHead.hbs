@@ -17,9 +17,9 @@
     sharelink: '{{shareLinks.shareLink}}',
     email: {
       share : {
-        subject: '{{urlencode (stringFormat "Get %s%% off %s?" companyName programDetails.referredRewardDetails.discountPercent) space="%20"}}',
-        body: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName programDetails.referredRewardDetails.discountPercent shareLinks.emailShareLink) space="%20"}}',
-        mailToLink: 'mailto:?subject={{urlencode (stringFormat "Get %s%% off %s?" companyName programDetails.referredRewardDetails.discountPercent) space="%20"}}&body={{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName programDetails.referredRewardDetails.discountPercent shareLinks.emailShareLink) space="%20"}}',
+        subject: '{{urlencode (stringFormat "Get %s%% off %s?" companyName "") space="%20"}}',
+        body: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName "" shareLinks.emailShareLink) space="%20"}}',
+        mailToLink: 'mailto:?subject={{urlencode (stringFormat "Get %s%% off %s?" companyName "") space="%20"}}&body={{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName "" shareLinks.emailShareLink) space="%20"}}',
       },
       reminder : {
         subject: '{{urlencode "How do you like Acme so far?" space="%20"}}',
@@ -29,21 +29,21 @@
       type: 'UNKNOWN'
     },
     facebook: {
-      title: '{{urlencode (stringFormat "Get %s%% off %s?" companyName programDetails.referredRewardDetails.discountPercent)}}',
-      summary: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName programDetails.referredRewardDetails.discountPercent shareLinks.facebookShareLink)}}',
+      title: '{{urlencode (stringFormat "Get %s%% off %s?" companyName "")}}',
+      summary: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName "" shareLinks.facebookShareLink)}}',
       link: '{{shareLinks.facebookShareLink}}',
       shareImage: '{{urlencode ""}}',
       appId: '396367127152561',
       redirectUrl: 'http://staging.referralsaasquatch.com/widget/close'
     },
     twitter: {
-      message: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName programDetails.referredRewardDetails.discountPercent shareLinks.twitterShareLink)}}'
+      message: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName "" shareLinks.twitterShareLink)}}'
     },
     mobile: {
       sharelink : '{{shareLinks.shareLink}}',
-      emailBody: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName programDetails.referredRewardDetails.discountPercent shareLinks.mobileEmailShareLink)}}',
-      facebookBody: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName programDetails.referredRewardDetails.discountPercent shareLinks.mobileFacebookShareLink)}}',
-      twitterBody: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName programDetails.referredRewardDetails.discountPercent shareLinks.mobileTwitterShareLink)}}',
+      emailBody: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName "" shareLinks.mobileEmailShareLink)}}',
+      facebookBody: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName "" shareLinks.mobileFacebookShareLink)}}',
+      twitterBody: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName "" shareLinks.mobileTwitterShareLink)}}',
       twitterShareLink : '{{shareLinks.mobileTwitterShareLink}}',
       facebookShareLink : '{{shareLinks.mobileFacebookShareLink}}',
       emailShareLink: '{{shareLinks.mobileEmailShareLink}}'
