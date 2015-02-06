@@ -103,13 +103,13 @@
               <div class="progress progress-legend">
                 <div class="progress-bar" style="width:100%"></div>
               </div>
-              {{rewardBalances.[0].totalDiscountPercent}}% Active discount
+              {{#if rewardBalances.0}}{{rewardBalances.[0].totalDiscountPercent}}{{else}}0{{/if}}% Active discount
             </div>
             <div class="col-xs-6">
               <div class="progress progress-legend">
                 <div class="progress-bar" style="width:0%"></div>
               </div>
-              {{math '100 - ' rewardBalances.[0].totalDiscountPercent}}% Discount available
+              {{#if rewardBalances.0}}{{math '100 - ' rewardBalances.[0].totalDiscountPercent}}{{else}}100{{/if}}% Discount available
             </div>
           </div>
 
