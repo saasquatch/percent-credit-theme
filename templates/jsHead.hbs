@@ -29,8 +29,8 @@
       type: 'UNKNOWN'
     },
     facebook: {
-      title: '{{urlencode (stringFormat "Get %s%% off %s?" companyName "")}}',
-      summary: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName "" shareLinks.facebookShareLink)}}',
+      title: '{{urlencode (stringFormat "Get %s%% off %s?" companyName programDetails.referredRewardDetails.discountPercent)}}',
+      summary: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName programDetails.referredRewardDetails.discountPercent shareLinks.facebookShareLink)}}',
       link: '{{shareLinks.facebookShareLink}}',
       shareImage: '{{urlencode ""}}',
       appId: '396367127152561',
