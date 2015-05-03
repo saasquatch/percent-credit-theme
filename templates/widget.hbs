@@ -142,6 +142,7 @@
                     programDetails=../programDetails}}
                     {{> referral}}
                   {{/block}}
+                  <span style="display:none">{{math ../programDetails.referredRewardDetails.credit '== 1'}}</span>
                 </tr>
               {{/each}}
             </table>
