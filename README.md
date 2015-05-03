@@ -1,28 +1,24 @@
 Percent Credit Theme
 ====================
 
-A generic percent credit theme for Referral Saasquatch
-
+A generic percent credit theme for Referral SaaSquatch.
 
 Setup
 -----
 
-To get started, clone the project, install the npm dependencies and start the server. You will need Node.js.
+To get started, clone the project, install [saasquatch-cli](https://github.com/saasquatch/saasquatch-cli) and start the server. You will need node.js.
 
-The serve task will compile less and handlebars on changes and reload the page if you install the plugin for  [LiveReload](http://livereload.com/).
-
-```
-git clone git@github.com:saasquatch/percent-credit-theme.git
-cd percent-credit-theme
-npm install -g gulp
-npm install
-gulp serve
+```bash
+$ git clone git@github.com:saasquatch/percent-credit-theme.git
+$ cd percent-credit-theme
+$ npm install -g saasquatch-cli
+$ squatch serve
 ```
 
-Mock Customer Data
-------------------
+Template Context
+----------------
 
-Example mock customer data can be found in `customer.json`.  In the dev environment this data is added to the handlebars context with the `gulp-compile-handlebars` plugin.
+The saasquatch-cli server will compile your Handlebars theme with the referral data in `customer.json` as the template context.
 
 License
 -------
