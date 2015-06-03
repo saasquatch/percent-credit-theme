@@ -344,6 +344,7 @@ button[data-scroll-element].disabled {
 [data-scroll-limit='0'] {
   display: none;
 
+  // Leave these elements with a height for correct container height calculation with no referrals
   & + .squatch-stats-body-actions,
   & ~ .squatch-attribution {
     visibility: hidden;
