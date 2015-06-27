@@ -22,11 +22,25 @@
 
 // Utility classes
 @import "../libs/bootstrap/less/_utilities.less";
+@import "../libs/bootstrap/less/_responsive-utilities.less";
 
-// SaaSquatch Theme
+// Theme base
 @import '_variables.less';
-@import '_theme.less';
-@import '_icons.less';
+@import '_base.less';
+@import '_shims.less';
 
-// Theme Modes
+// Components
+@import '_attribution.less';
+@import '_buttons.less';
+@import '_icons.less';
+@import '_input-groups.less';
+@import '_panel.less';
+@import '_referrals.less';
+@import '_share.less';
+
+// Atomic classes
+@import '_atomic.less';
+
+// Theme modes
 @import 'modes/_embed.less';
+@import 'modes/_popup.less';
