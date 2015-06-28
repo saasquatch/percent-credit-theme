@@ -1,8 +1,6 @@
 {{!--
 
-  jsHead.hbs
-
-  Core javascript to empower widget functionality.
+  Core JavaScript to power widget functionality.
 
   TODO: Eventually this should get merged in as part of the {{squatchHead}} core helper instead of being manually included in every template
 
@@ -10,18 +8,18 @@
 
 --}}
 
-<script type="text/javascript" charset="utf-8">
+<script>
   window.squatch = window.squatch || {};
   window.squatch.user = {
-    code: '{{user.referralCode}}',
+    code     : '{{user.referralCode}}',
     sharelink: '{{shareLinks.shareLink}}',
-    email: {
+    email    : {
       share : {
         subject: '{{urlencode (stringFormat "Get %s for %s%% less!" companyName programDetails.referredRewardDetails.discountPercent) space="%20"}}',
         body: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName programDetails.referredRewardDetails.discountPercent shareLinks.emailShareLink) space="%20"}}',
         mailToLink: 'mailto:?subject={{urlencode (stringFormat "Get %s for %s%% less!" companyName programDetails.referredRewardDetails.discountPercent) space="%20"}}&body={{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName programDetails.referredRewardDetails.discountPercent shareLinks.emailShareLink) space="%20"}}',
       },
-      reminder : {
+      reminder: {
         subject: '{{urlencode "How do you like Acme so far?" space="%20"}}',
         body: '{{urlencode (stringFormat "Hey,%n %nI saw that you signed up for Acme. What do you think of it so far?%n %nBy the way, if you've lost the link to Acme, here it is again - %s" shareLinks.emailShareLink) space="%20"}}',
         mailToLink: 'mailto:?subject={{urlencode "How do you like Acme so far?" space="%20"}}&body={{urlencode (stringFormat "Hey,%n %nI saw that you signed up for Acme. What do you think of it so far?%n %nBy the way, if you've lost the link to Acme, here it is again - %s" shareLinks.emailShareLink) space="%20"}}',
@@ -40,56 +38,55 @@
       message: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName programDetails.referredRewardDetails.discountPercent shareLinks.twitterShareLink)}}'
     },
     mobile: {
-      sharelink : '{{shareLinks.shareLink}}',
+      sharelink: '{{shareLinks.shareLink}}',
       emailBody: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName programDetails.referredRewardDetails.discountPercent shareLinks.mobileEmailShareLink)}}',
       facebookBody: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName programDetails.referredRewardDetails.discountPercent shareLinks.mobileFacebookShareLink)}}',
       twitterBody: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName programDetails.referredRewardDetails.discountPercent shareLinks.mobileTwitterShareLink)}}',
-      twitterShareLink : '{{shareLinks.mobileTwitterShareLink}}',
-      facebookShareLink : '{{shareLinks.mobileFacebookShareLink}}',
+      twitterShareLink: '{{shareLinks.mobileTwitterShareLink}}',
+      facebookShareLink: '{{shareLinks.mobileFacebookShareLink}}',
       emailShareLink: '{{shareLinks.mobileEmailShareLink}}'
     },
     fallbackImg: 'https://www.gravatar.com/avatar/0?d=blank'
   };
 
   window.squatch.analytics = {
-      apikey : '{{segmentApiKey}}',
-      attributes : {
-        tenant : '{{tenantAlias}}',
-        userId : '{{user.id}}',
-        accountId : '{{user.accountId}}'
-      },
-      user: {
-        ident: '{{user.id}}',
-        traits: {
-        tenant : '{{tenantAlias}}',
-        accountId : '{{user.accountId}}'
-         }
-      },
-      events: {
-        OPENED_WIDGET : 'Opened Widget',
-        OPENED_POPUP : 'Opened Popup',
-        CLOSED_POPUP : 'Closed Popup',
-        FACEBOOK_SHARE : 'Clicked Facebook Share',
-        TWITTER_SHARE : 'Clicked Twitter Share',
-        EMAIL_SHARE : 'Clicked Email Share',
-        LEARN_MORE : 'Clicked Learn More',
-        FAQ_BACK : 'Clicked FAQ Back',
-        COPY_LINK : 'Clicked Copy Link',
-        REMIND_FRIEND : 'Clicked Remind Friend'
+    apikey: '{{segmentApiKey}}',
+    attributes: {
+      tenant   : '{{tenantAlias}}',
+      userId   : '{{user.id}}',
+      accountId: '{{user.accountId}}'
+    },
+    user: {
+      ident : '{{user.id}}',
+      traits: {
+        tenant   : '{{tenantAlias}}',
+        accountId: '{{user.accountId}}'
       }
+    },
+    events: {
+      OPENED_WIDGET : 'Opened Widget',
+      OPENED_POPUP  : 'Opened Popup',
+      CLOSED_POPUP  : 'Closed Popup',
+      FACEBOOK_SHARE: 'Clicked Facebook Share',
+      TWITTER_SHARE : 'Clicked Twitter Share',
+      EMAIL_SHARE   : 'Clicked Email Share',
+      LEARN_MORE    : 'Clicked Learn More',
+      FAQ_BACK      : 'Clicked FAQ Back',
+      COPY_LINK     : 'Clicked Copy Link',
+      REMIND_FRIEND : 'Clicked Remind Friend'
+    }
   };
 
   window.squatch.mode = {
-      widgetMode: '{{mode}}',
-      POPUP_MODE : 'POPUP',
-      EMBED_MODE : 'EMBED',
-      DEMO_MODE : 'DEMO',
-      DEMO_EMBED_MODE : 'DEMO_EMBED',
-      NOCONTENT_MODE : 'NOCONTENT'
+    widgetMode     : '{{mode}}',
+    POPUP_MODE     : 'POPUP',
+    EMBED_MODE     : 'EMBED',
+    DEMO_MODE      : 'DEMO',
+    DEMO_EMBED_MODE: 'DEMO_EMBED',
+    NOCONTENT_MODE : 'NOCONTENT'
   };
 
   window.squatch.asset = {
-    zeroclipboard : '{{assets "javascripts/ZeroClipboard.swf"}}'
+    zeroclipboard: '{{assets "javascripts/ZeroClipboard.swf"}}'
   }
-
 </script>
