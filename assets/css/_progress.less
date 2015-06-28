@@ -6,10 +6,31 @@
   .progress-bar {
     .box-shadow(1px 0 0 darken(@gray-light, 5%));
   }
+}
 
-  .progress-legend {
+.squatch-progress-legend {
+  &:extend(.clearfix all);
+  margin-left: -@grid-gutter-width;
+  margin-right: -@grid-gutter-width;
+
+  .progress {
     width: @line-height-computed;
     float: left;
     margin: 0 10px 0 0;
+  }
+}
+
+.squatch-progress-legend-item {
+  float: left;
+  padding-left: @grid-gutter-width;
+  padding-right: @grid-gutter-width;
+  width: 50%;
+
+  @media (max-width: @screen-sm-max) {
+    width: 100%;
+
+    & + & {
+      margin-top: @grid-gutter-width;
+    }
   }
 }
