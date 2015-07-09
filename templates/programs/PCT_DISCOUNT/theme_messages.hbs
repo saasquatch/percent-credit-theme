@@ -15,9 +15,9 @@
     sharelink: '{{shareLinks.shareLink}}',
     email    : {
       share : {
-        subject: '{{urlencode (stringFormat "Get %s for %s%% less!" companyName programDetails.referredRewardDetails.discountPercent) space="%20"}}',
-        body: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName programDetails.referredRewardDetails.discountPercent shareLinks.emailShareLink) space="%20"}}',
-        mailToLink: 'mailto:?subject={{urlencode (stringFormat "Get %s for %s%% less!" companyName programDetails.referredRewardDetails.discountPercent) space="%20"}}&body={{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName programDetails.referredRewardDetails.discountPercent shareLinks.emailShareLink) space="%20"}}',
+        subject: '{{urlencode (variables 'shareMessaging.emailShareSubject') space="%20"}}',
+        body: '{{urlencode (variables 'shareMessaging.emailShareBody') space="%20"}}',
+        mailToLink: 'mailto:?subject={{urlencode (variables 'shareMessaging.emailShareSubject') space="%20"}}&body={{urlencode (variables 'shareMessaging.emailShareBody') space="%20"}}',
       },
       reminder: {
         subject: '{{urlencode "How do you like Acme so far?" space="%20"}}',
@@ -27,15 +27,15 @@
       type: 'UNKNOWN'
     },
     facebook: {
-      title: '{{urlencode (stringFormat "Get %s for %s%% less!" companyName programDetails.referredRewardDetails.discountPercent)}}',
-      summary: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName programDetails.referredRewardDetails.discountPercent shareLinks.facebookShareLink)}}',
+      title: '{{urlencode (variables 'shareMessaging.facebookShareSubject')}}',
+      summary: '{{urlencode (variables 'shareMessaging.facebookShareBody')}}',
       link: '{{shareLinks.facebookShareLink}}',
       shareImage: '{{urlencode ""}}',
       appId: '157382547792399',
       redirectUrl: 'http://app.referralsaasquatch.com/widget/close'
     },
     twitter: {
-      message: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName programDetails.referredRewardDetails.discountPercent shareLinks.twitterShareLink)}}'
+      message: '{{urlencode (variables 'shareMessaging.twitterShareBody')}}'
     },
     mobile: {
       sharelink: '{{shareLinks.shareLink}}',
