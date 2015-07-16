@@ -19,7 +19,9 @@
           paid=1
           dateReferred=referredBy.dateReferred}}
 
-          {{> (stringFormat 'programs/%s/referral' programDetails.referredRewardDetails.rewardType)}}
+          {{!-- TODO: Switch the second line below out with the line directly below when we've updated to Handlebars.java 2.2.0 --}}
+          {{!-- {{> (stringFormat 'programs/%s/referral' programDetails.referredRewardDetails.rewardType)}} --}}
+          {{> programs/PCT_DISCOUNT/referral}}
         {{/block}}
       </tr>
     {{/if}}
@@ -31,7 +33,9 @@
           referral=referredUser
           programDetails=../programDetails}}
 
-          {{> (stringFormat 'programs/%s/referral' programDetails.referredRewardDetails.rewardType)}}
+          {{!-- TODO: Switch the second line below out with the line directly below when we've updated to Handlebars.java 2.2.0 --}}
+          {{!-- {{> (stringFormat 'programs/%s/referral' programDetails.referredRewardDetails.rewardType)}} --}}
+          {{> programs/PCT_DISCOUNT/referral}}
         {{/block}}
       </tr>
     {{/each}}
