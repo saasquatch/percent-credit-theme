@@ -1,0 +1,27 @@
+<h2 class="squatch-panel-title">
+  Referral Stats
+</h2>
+
+<div class="squatch-progress">
+  <div class="progress">
+    <div class="progress-bar" style="width:{{rewardBalances.[0].totalDiscountPercent}}%"></div>
+  </div>
+
+  <div class="squatch-progress-legend">
+    <div class="squatch-progress-legend-item">
+      <div class="progress">
+        <div class="progress-bar" style="width:100%"></div>
+      </div>
+
+      {{#if rewardBalances.[0].totalDiscountPercent}}{{rewardBalances.[0].totalDiscountPercent}}{{else}}0{{/if}}% Active discount
+    </div>
+
+    <div class="squatch-progress-legend-item">
+      <div class="progress">
+        <div class="progress-bar" style="width:0%"></div>
+      </div>
+
+      {{#if rewardBalances.[0].totalDiscountPercent}}{{math '100 - ' rewardBalances.[0].totalDiscountPercent}}{{else}}100{{/if}}% Discount available
+    </div>
+  </div>
+</div>
