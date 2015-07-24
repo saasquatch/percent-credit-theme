@@ -27,14 +27,10 @@
         text-yellow
       {{/if}}
     ">
-      {{#if cancelled}}
-        Discount Removed
+      {{#if paid}}
+        Discount Earned
       {{else}}
-        {{#if paid}}
-          Discount Earned
-        {{else}}
-          Discount Pending
-        {{/if}}
+        Discount Pending
       {{/if}}
     </span>
   </div>
@@ -80,10 +76,14 @@
       text-yellow
     {{/if}}
   ">
-    {{#if paid}}
-      Discount Earned
+    {{#if cancelled}}
+      Discount Removed
     {{else}}
-      Discount Pending
+      {{#if paid}}
+        Discount Earned
+      {{else}}
+        Discount Pending
+      {{/if}}
     {{/if}}
   </div>
 </td>
