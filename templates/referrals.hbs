@@ -8,6 +8,8 @@
   data-scroll-offset="0"
   data-scroll-limit="{{#if referredBy.dateReferred}}{{math referralsLength '+ 1'}}{{else}}{{math referralsLength}}{{/if}}">
 
+Test: {{referredBy.isReferredRewardCancelled}}
+
   <table class="squatch-referrals-list">
     {{#if referredBy.referredByUser}}
       <tr id="0">
