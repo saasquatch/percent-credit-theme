@@ -29,7 +29,6 @@
 
     {{#each referrals}}
       <tr id="{{#if ../referredBy.dateReferred}}{{math @index '+ 1'}}{{else}}{{math @index}}{{/if}}">
-        Test2: {{isReferrerRewardCancelled}}
         {{#block
           "referredUser"
           referral=referredUser
