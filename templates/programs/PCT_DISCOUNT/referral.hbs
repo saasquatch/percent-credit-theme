@@ -74,10 +74,14 @@
   "></i>
 
   <div class="squatch-referrals-heading hidden-sm">
-    {{#if paid}}
-      {{programDetails.referredRewardDetails.discountPercent}}%
+    {{#if cancelled}}
+      Referral Reward
     {{else}}
-      Trial Signup
+      {{#if paid}}
+        {{programDetails.referredRewardDetails.discountPercent}}%
+      {{else}}
+        Trial Signup
+      {{/if}}
     {{/if}}
   </div>
 
@@ -93,7 +97,7 @@
     {{/if}}
   ">
     {{#if cancelled}}
-      Discount Removed
+      Removed
     {{else}}
       {{#if paid}}
         Discount Earned
