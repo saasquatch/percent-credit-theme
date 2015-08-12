@@ -221,23 +221,6 @@
     },
     {
       "referredUser": {
-        "id": "5cukkyfnuhbyjdwxyxphv47u_423638",
-        "accountId": "5cukkyfnuhbyjdwxyxphv47u",
-        "referralCode": "JEREMYMYERS",
-        "email": "jeremy@example.com",
-        "imageUrl": "",
-        "firstName": "Jeremy",
-        "lastName": "Myers"
-      },
-      "dateReferred": 1407886778837,
-      "paid": false,
-      "referrerReward": null,
-      "referredReward": null,
-      "referredRewardDeniedOrCancelled": false,
-      "referrerRewardDeniedOrCancelled": false
-    },
-    {
-      "referredUser": {
         "id": "5cukkyfnuhbyjdwxyxphv47u_778239",
         "accountId": "5cukkyfnuhbyjdwxyxphv47u",
         "referralCode": "ERICMASON",
