@@ -90,7 +90,7 @@
           "minLength": 1,
           "format": "textarea",
           "title": "Body Text:",
-          "default" : "Share {{ referred_percent_discount }}% off Customized Widget Co and receive {{ referrer_percent_discount }}% off your monthly bill when they pay their first bill.",
+          "default" : "Share {{ referred_percent_discount }}% off {{companyName}} and receive {{ referrer_percent_discount }}% off your monthly bill when they pay their first bill.",
           "options": {
             "input_height": "100px"
           }
