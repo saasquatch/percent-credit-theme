@@ -46,7 +46,9 @@
         "widgetFont": {
           "type": "string",
           "title": "Widget Font:",
+          "default": "'Lato',sans-serif",
           "enum": [
+            "'Lato',sans-serif",
             "Times New Roman",
             "Arial",
             "Courier",
@@ -68,7 +70,7 @@
           "format": "text",
           "minLength": 1,
           "title": "Heading Text Color:",
-          "default" : "#000000",
+          "default" : "#4486E1",
           "options": {
             "validate": ["hex-color"]
           }
@@ -78,7 +80,7 @@
           "minLength": 1,
           "format": "textarea",
           "title": "Heading Text:",
-          "default" : "placeholder",
+          "default" : "Give {{ referred_percent_discount }}% off and Get {{ referrer_percent_discount }}% off!",
           "options": {
             "input_height": "100px"
           }
@@ -88,7 +90,7 @@
           "minLength": 1,
           "format": "textarea",
           "title": "Body Text:",
-          "default" : "placeholder",
+          "default" : "Share {{ referred_percent_discount }}% off Customized Widget Co and receive {{ referrer_percent_discount }}% off your monthly bill when they pay their first bill.",
           "options": {
             "input_height": "100px"
           }
