@@ -80,7 +80,7 @@
           "minLength": 1,
           "format": "textarea",
           "title": "Heading Text:",
-          "default" : "Give {{ referred_percent_discount }}% off and Get {{ referrer_percent_discount }}% off!",
+          "default" : "Give {{programDetails.referredRewardDetails.discountPercent}}% off and Get {{programDetails.referrerRewardDetails.discountPercent}}% off!",
           "options": {
             "input_height": "100px"
           }
@@ -90,7 +90,7 @@
           "minLength": 1,
           "format": "textarea",
           "title": "Body Text:",
-          "default" : "Share {{ referred_percent_discount }}% off {{companyName}} and receive {{ referrer_percent_discount }}% off your monthly bill when they pay their first bill.",
+          "default" : "Share {{programDetails.referredRewardDetails.discountPercent}}% off {{companyName}} and receive {{programDetails.referrerRewardDetails.discountPercent}}% off your monthly bill when they pay their first bill.",
           "options": {
             "input_height": "100px"
           }
