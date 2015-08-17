@@ -40,61 +40,61 @@
       "required": ["emailShareBody", "emailShareSubject", "facebookShareSubject", "facebookShareBody", "twitterShareBody"]
     },
     "widgetCustomization": {
-    	"title": "Customize Referral Widget",
-    	"type": "object",
-    	"properties": {
-				"widgetFont": {
-					"type": "string",
-					"title": "Widget Font:",
-					"enum": [
-						"Times New Roman",
-						"Arial",
-						"Courier",
-						"Tahoma",
-						"Verdana" +
-					],
-					"options": {
-					  "enum_title": [
-					    "'Times New Roman'",
-					    "Arial",
-					    "Courier",
-					    "Tahoma",
-					    "Verdana"
-					  ] +
-					} +
-    		},
-    		"headerColor": {
-    			"type": "string",
-    			"format": "text",
-    			"minLength": 1,
-    			"title": "Heading Text Color:",
-    			"default" : "#000000",
-    			"options": {
-    				"validate": ["hex-color"]
-    			}
-    		},
-    		"header": {
-    			"type": "string",
-    			"minLength": 1,
-    			"format": "textarea",
-    			"title": "Heading Text:",
-    			"default" : "placeholder",
-    			"options": {
-    				"input_height": "100px"
-    			}
-    		},
-    		"headerDetails": {
-    			"type": "string",
-    			"minLength": 1,
-    			"format": "textarea",
-    			"title": "Body Text:",
-    			"default" : "placeholder",
-    			"options": {
-    				"input_height": "100px"
-    			}
-    		}
-    	}
-		}
+      "title": "Customize Referral Widget",
+      "type": "object",
+      "properties": {
+        "widgetFont": {
+          "type": "string",
+          "title": "Widget Font:",
+          "enum": [
+            "Times New Roman",
+            "Arial",
+            "Courier",
+            "Tahoma",
+            "Verdana"
+          ],
+          "options": {
+            "enum_title": [
+              "'Times New Roman'",
+              "Arial",
+              "Courier",
+              "Tahoma",
+              "Verdana"
+            ]
+          }
+        },
+        "headerColor": {
+          "type": "string",
+          "format": "text",
+          "minLength": 1,
+          "title": "Heading Text Color:",
+          "default" : "#000000",
+          "options": {
+            "validate": ["hex-color"]
+          }
+        },
+        "header": {
+          "type": "string",
+          "minLength": 1,
+          "format": "textarea",
+          "title": "Heading Text:",
+          "default" : "placeholder",
+          "options": {
+            "input_height": "100px"
+          }
+        },
+        "headerDetails": {
+          "type": "string",
+          "minLength": 1,
+          "format": "textarea",
+          "title": "Body Text:",
+          "default" : "placeholder",
+          "options": {
+            "input_height": "100px"
+          }
+        }
+      }
+    }
   },
   "required": ["shareMessaging", "widgetCustomization"]
 }
