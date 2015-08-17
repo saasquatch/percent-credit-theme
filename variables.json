@@ -46,8 +46,9 @@
         "widgetFont": {
           "type": "string",
           "title": "Widget Font:",
-          "default": "'Lato',sans-serif",
+          "default": "\"Helvetica Neue\",Helvetica,Arial,sans-serif",
           "enum": [
+            "\"Helvetica Neue\",Helvetica,Arial,sans-serif",
             "'Lato',sans-serif",
             "Times New Roman",
             "Arial",
@@ -57,6 +58,8 @@
           ],
           "options": {
             "enum_title": [
+              "Helvetica Neue",
+              "Lato",
               "'Times New Roman'",
               "Arial",
               "Courier",
