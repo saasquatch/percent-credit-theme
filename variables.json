@@ -75,7 +75,7 @@
             "validate": ["hex-color"]
           }
         },
-        "header": {
+        "heading": {
           "type": "string",
           "minLength": 1,
           "format": "textarea",
