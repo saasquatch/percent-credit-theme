@@ -72,7 +72,7 @@
           "type": "string",
           "format": "text",
           "minLength": 1,
-          "title": "Heading Text Color <a href=\"http://www.color-hex.com/216-web-safe-colors/\">(hex code)</a>" :",
+          "title": "Heading Text Color <a href=\"http://www.color-hex.com/216-web-safe-colors/\">(hex code)</a>",
           "default" : "#4486E1",
           "options": {
             "validate": ["hex-color"]
