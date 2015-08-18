@@ -85,7 +85,8 @@
           "title": "Heading Text:",
           "default" : "Give {{programDetails.referredRewardDetails.discountPercent}}% off and Get {{programDetails.referrerRewardDetails.discountPercent}}% off!",
           "options": {
-            "input_height": "100px"
+            "input_height": "100px",
+            "validate": ["handlebars"]
           }
         },
         "headerDetails": {
@@ -95,7 +96,8 @@
           "title": "Body Text:",
           "default" : "Share {{programDetails.referredRewardDetails.discountPercent}}% off {{companyName}} and receive {{programDetails.referrerRewardDetails.discountPercent}}% off your monthly bill when they pay their first bill.",
           "options": {
-            "input_height": "100px"
+            "input_height": "100px",
+            "validate": ["handlebars"]
           }
         }
       }
