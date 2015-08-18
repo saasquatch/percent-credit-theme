@@ -50,17 +50,17 @@
           "enum": [
             "\"Helvetica Neue\",Helvetica,Arial,sans-serif",
             "'Lato',sans-serif",
-            "Times New Roman",
+            "'Times New Roman'",
             "Arial",
             "Courier",
             "Tahoma",
             "Verdana"
           ],
           "options": {
-            "enum_title": [
+            "enum_titles": [
               "Helvetica Neue",
               "Lato",
-              "'Times New Roman'",
+              "Times New Roman",
               "Arial",
               "Courier",
               "Tahoma",
