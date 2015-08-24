@@ -54,7 +54,8 @@
             "Arial",
             "Courier",
             "Tahoma",
-            "Verdana"
+            "Verdana",
+            "Georgia"
           ],
           "options": {
             "enum_titles": [
@@ -64,7 +65,8 @@
               "Arial",
               "Courier",
               "Tahoma",
-              "Verdana"
+              "Verdana",
+              "Georgia"
             ]
           }
         },
