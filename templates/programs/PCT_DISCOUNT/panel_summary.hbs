@@ -12,8 +12,7 @@
       <div class="progress">
         <div class="progress-bar" style="width:100%"></div>
       </div>
-
-      {{#if rewardBalances.[0].totalDiscountPercent}}{{rewardBalances.[0].totalDiscountPercent}}{{else}}0{{/if}}% {{i18n "activeDiscount" bundle="i18n/messages"}}
+   {{#if rewardBalances.[0].totalDiscountPercent}}{{i18n "activeDiscount" rewardBalances.[0].totalDiscountPercent bundle="i18n/messages"}}{{else}}{{i18n "activeDiscount" "0" bundle="i18n/messages"}}{{/if}} 
     </div>
 
     <div class="squatch-progress-legend-item">
@@ -21,7 +20,7 @@
         <div class="progress-bar" style="width:0%"></div>
       </div>
 
-      {{#if rewardBalances.[0].totalDiscountPercent}}{{math '100 - ' rewardBalances.[0].totalDiscountPercent}}{{else}}100{{/if}}% {{i18n "discountAvailable" bundle="i18n/messages"}}
+      {{#if rewardBalances.[0].totalDiscountPercent}}{{i18n "discountAvailable" (math '100 - ' rewardBalances.[0].totalDiscountPercent) bundle="i18n/messages"}}{{else}}{{i18n "discountAvailable" "100" bundle="i18n/messages"}}{{/if}} 
     </div>
   </div>
 </div>
