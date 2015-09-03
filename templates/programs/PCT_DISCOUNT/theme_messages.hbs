@@ -15,8 +15,8 @@
     sharelink: '{{shareLinks.shareLink}}',
     email: {
       share : {
-        subject: '{{urlencode (i18n "emailShareSubject" shareLinks.emailShareLink bundle="i18n/messages") space="%20"}}',
-        body: '{{urlencode (i18n "emailShareBody" shareLinks.emailShareLink bundle="i18n/messages") space="%20"}}',
+        subject: '{{urlencode (i18n "emailShareSubject" companyName programDetails.referredRewardDetails.discountPercent bundle="i18n/messages") space="%20"}}',
+        body: '{{urlencode (i18n "emailShareBody" companyName programDetails.referredRewardDetails.discountPercent shareLinks.emailShareLink bundle="i18n/messages") space="%20"}}',
         mailToLink: 'mailto:?subject={{urlencode (i18n "emailShareSubject" shareLinks.emailShareLink bundle="i18n/messages" ) space="%20"}}&body={{urlencode (i18n "emailShareBody" shareLinks.emailShareLink bundle="i18n/messages") space="%20"}}',
       },
       reminder : {
@@ -27,15 +27,15 @@
       type: 'UNKNOWN'
     },
     facebook: {
-      title: '{{urlencode (i18n "fbTitle" bundle="i18n/messages") }}',
-      summary: '{{urlencode (i18n "fbSummary" shareLinks.facebookShareLink bundle="i18n/messages") }}',
+      title: '{{urlencode (i18n "fbTitle" companyName programDetails.referredRewardDetails.discountPercent bundle="i18n/messages") }}',
+      summary: '{{urlencode (i18n "fbSummary" companyName programDetails.referredRewardDetails.discountPercent shareLinks.facebookShareLink bundle="i18n/messages") }}',
       link: '{{shareLinks.facebookShareLink}}',
       shareImage: '{{assets "images/log-me-in.jpg"}}',
       appId: '157382547792399',
       redirectUrl: 'http://app.referralsaasquatch.com/widget/close'
     },
     twitter: {
-      message: '{{urlencode (i18n "twitterMsg" shareLinks.twitterShareLink bundle="i18n/messages") }}'
+      message: '{{urlencode (i18n "twitterMsg" companyName programDetails.referredRewardDetails.discountPercent shareLinks.twitterShareLink bundle="i18n/messages") }}'
     },
     mobile: {
       sharelink : '{{shareLinks.shareLink}}',
