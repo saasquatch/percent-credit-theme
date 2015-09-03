@@ -1,7 +1,7 @@
 [main]
 host = https://www.transifex.com
 
-[percent-credit-theme.messagesproperties-10]
+[logmein-theme.messagesproperties-10]
 file_filter = i18n/messages_<lang>.properties
 source_file = i18n/messages.properties
 source_lang = en
