@@ -1,6 +1,7 @@
 <div class="squatch-referrals-title">
-  {{i18n "referralDetails" bundle=“i18n/messages"}}
+  Referral Details
 </div>
+
 <div
   class="squatch-referrals"
   id="squatch-referrals-scroll"
@@ -13,16 +14,18 @@
         {{#block
           "referredByUser"
           referral=referredBy.referredByUser
-          description="{{i18n "referringUser" bundle=“i18n/messages"}}"
-          heading="{{i18n "referredYou" bundle=“i18n/messages"}}"
+          description="Referring User"
+          heading="Referred You"
           paid=1
           dateReferred=referredBy.dateReferred}}
+
           {{!-- TODO: Switch the second line below out with the line directly below when we've updated to Handlebars.java 2.2.0 --}}
           {{!-- {{> (stringFormat 'programs/%s/referral' programDetails.referredRewardDetails.rewardType)}} --}}
           {{> programs/PCT_DISCOUNT/referral}}
         {{/block}}
       </tr>
     {{/if}}
+
     {{#each referrals}}
       <tr id="{{#if ../referredBy.dateReferred}}{{math @index '+ 1'}}{{else}}{{math @index}}{{/if}}">
         {{#block
@@ -40,8 +43,9 @@
 </div>
 
 <div class="squatch-referrals-actions">
-  <button class="btn btn-default disabled" data-scroll-element="#squatch-referrals-scroll" data-scroll-increment="-3">{{i18n "previous" bundle="i18n/messages"}}</button>
+  <button class="btn btn-default disabled" data-scroll-element="#squatch-referrals-scroll" data-scroll-increment="-3">Previous</button>
 
-  <button class="btn btn-default" data-close-panel="#squatch-panel" data-scroll-reset="#squatch-referrals-scroll">{{i18n "hideDetails" bundle=“i18n/messages"}}</button>
-  <button class="btn btn-default disabled" data-scroll-element="#squatch-referrals-scroll" data-scroll-increment="3">{{i18n "viewMore" bundle="i18n/messages"}}</button>
+  <button class="btn btn-default" data-close-panel="#squatch-panel" data-scroll-reset="#squatch-referrals-scroll">Hide Details</button>
+
+  <button class="btn btn-default disabled" data-scroll-element="#squatch-referrals-scroll" data-scroll-increment="3">View More</button>
 </div>
