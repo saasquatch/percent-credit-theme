@@ -17,7 +17,7 @@
       share : {
         subject: '{{urlencode (i18n "emailShareSubject" companyName programDetails.referredRewardDetails.discountPercent bundle="i18n/messages") space="%20"}}',
         body: '{{urlencode (i18n "emailShareBody" companyName programDetails.referredRewardDetails.discountPercent shareLinks.emailShareLink bundle="i18n/messages") space="%20"}}',
-        mailToLink: 'mailto:?subject={{urlencode (i18n "emailShareSubject" shareLinks.emailShareLink bundle="i18n/messages" ) space="%20"}}&body={{urlencode (i18n "emailShareBody" shareLinks.emailShareLink bundle="i18n/messages") space="%20"}}',
+        mailToLink: 'mailto:?subject={{urlencode (i18n "emailShareSubject" companyName programDetails.referredRewardDetails.discountPercent bundle="i18n/messages" ) space="%20"}}&body={{urlencode (i18n "emailShareBody" companyName programDetails.referredRewardDetails.discountPercent shareLinks.emailShareLink bundle="i18n/messages") space="%20"}}',
       },
       reminder : {
         subject: '',
