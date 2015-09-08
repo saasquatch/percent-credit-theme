@@ -11,11 +11,11 @@
   <table class="squatch-referrals-list">
     {{#if referredBy.referredByUser}}
       <tr id="0">
-        {{#block
+         {{#block
           "referredByUser"
           referral=referredBy.referredByUser
-          description="Referring User"
-          heading="Referred You"
+          description=(i18n "referringUser" bundle="i18n/messages")
+          heading=(i18n "referredYou" bundle="i18n/messages")
           paid=1
           dateReferred=referredBy.dateReferred}}
 
