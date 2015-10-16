@@ -1,0 +1,6 @@
+---
+from: {{variables 'emails.REFERRAL_STARTED.configuration.fromName'}}
+fromName: {{variables 'emails.REFERRAL_STARTED.configuration.fromAddress'}}
+subject: {{variables 'emails.REFERRAL_STARTED.configuration.subject'}}
+---
+Hello, {{user.firstName}}. {{newReferral.referredUser.firstName}} signed up thanks to you!
