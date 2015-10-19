@@ -130,6 +130,22 @@
 	            },
 	            { "$ref" : "#/definitions/email/definitions/configuration" }
 	          ]
+	        },
+	        "content" : {
+	          "allOf" : [
+	            {
+	              "properties" : {
+	                "headerImageUrl" : { "default" : "//app.referrralsaasquatch.com/referral-converted.png" },
+	                "headerTitle" : { "default" : “Reward Limit“ },
+	                "headerBody" : { "default" : "You have successfully referred the maximum!” },
+	                "mainBody" : { "default" : “Thanks for spreading the word about {{companyName}}. You’ve referred so many new people that you’ve earned the maximum amount of available credit.},
+			“shareCodeCTA” : { "default" : “However, you can keep referring new users and giving {{programDetails.referrerRewardDetails.discountPercent}} off with your code. - {{user.referralCode}}“ }	              
+}
+
+	            },
+	            { "$ref" : "#/definitions/email/definitions/generalContent" },
+	            { "$ref" : "#/definitions/email/definitions/shareContent" }
+	          ]
 	        }
           }
         },
@@ -276,7 +292,7 @@
               "default" : "Keep sharing your code and earn more discounts - {{user.referralCode}}"
             },
             "shareLink" : {
-              "type" : "string",
+              "type" : "string",sha
               "title" : "Share Link",
               "propertyOrder": 6,
               "default" : "{{shareLinks.shareLink}}" 
