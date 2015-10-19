@@ -292,7 +292,7 @@
               "default" : "Keep sharing your code and earn more discounts - {{user.referralCode}}"
             },
             "shareLink" : {
-              "type" : "string",sha
+              "type" : "string",
               "title" : "Share Link",
               "propertyOrder": 6,
               "default" : "{{shareLinks.shareLink}}" 
