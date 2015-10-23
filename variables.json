@@ -223,11 +223,15 @@
               "type": "string",
               "title": "From Name",
               "default": "{{companyName}}",
-              "propertyOrder": 1
+              "propertyOrder": 1,
+              "options": {
+                "validate": ["handlebars"]
+              }
             },
             "fromAddress": {
               "type": "string",
               "title": "From Address",
+              "format": "email",
               "default": "referral@mail.saasquat.ch",
               "propertyOrder": 2
             },
@@ -238,6 +242,7 @@
               "default": "Referral Update",
               "propertyOrder": 3,
               "options": {
+              	"validate": ["handlebars"],
                 "input_height": "50px"
               }
             },
@@ -254,17 +259,26 @@
             "headerImageUrl": {
               "type": "string",
               "title": "Header Image URL",
-              "propertyOrder": 1
+              "propertyOrder": 1,
+              "options": {
+                "validate": ["handlebars"]
+              }
             },
             "headerTitle": {
               "type": "string",
               "title": "Header Title",
-              "propertyOrder": 2
+              "propertyOrder": 2,
+              "options": {
+                "validate": ["handlebars"]
+              }
             },
             "headerBody": {
               "type": "string",
               "title": "Header Body",
-              "propertyOrder": 3
+              "propertyOrder": 3,
+              "options": {
+                "validate": ["handlebars"]
+              }
             },
             "mainBody": {
               "type": "string",
@@ -272,13 +286,17 @@
               "format": "textarea",
               "propertyOrder": 4,
               "options": {
+              	"validate": ["handlebars"],
                 "input_height": "50px"
               }
             },
             "footer": {
               "type" : "string",
               "title": "Footer",
-              "propertyOrder": 1001
+              "propertyOrder": 1001,
+              "options": {
+                "validate": ["handlebars"]
+              }
             }
           }
         },
@@ -289,19 +307,28 @@
               "type" : "string",
               "title" : "Share Code CTA",
               "propertyOrder": 5,
-              "default" : "Keep sharing your code and earn more discounts - {{user.referralCode}}"
+              "default" : "Keep sharing your code and earn more discounts - {{user.referralCode}}",
+              "options": {
+                "validate": ["handlebars"]
+              }
             },
             "shareLink" : {
               "type" : "string",
               "title" : "Share Link",
               "propertyOrder": 6,
-              "default" : "{{shareLinks.shareLink}}" 
+              "default" : "{{shareLinks.shareLink}}",
+              "options": {
+                "validate": ["handlebars"]
+              }
             },
             "shareButtonHeader" : {
               "type" : "string",
               "title" : "Share Button Header",
               "propertyOrder": 7,
-              "default" : "Refer and Earn a {{programDetails.referredRewardDetails.discountPercent}}% Discount" 
+              "default" : "Refer and Earn a {{programDetails.referredRewardDetails.discountPercent}}% Discount",
+              "options": {
+                "validate": ["handlebars"]
+              }
             }
           }
         }
