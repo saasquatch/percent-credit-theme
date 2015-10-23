@@ -224,6 +224,7 @@
               "title": "From Name",
               "default": "{{companyName}}",
               "propertyOrder": 1,
+              "minLength": 1,
               "options": {
                 "validate": ["handlebars"]
               }
@@ -233,7 +234,8 @@
               "title": "From Address",
               "format": "email",
               "default": "referral@mail.saasquat.ch",
-              "propertyOrder": 2
+              "propertyOrder": 2,
+              "minLength": 5
             },
             "subject": {
               "type": "string",
@@ -241,6 +243,7 @@
               "format": "textarea",
               "default": "Referral Update",
               "propertyOrder": 3,
+              "minLength": 1,
               "options": {
               	"validate": ["handlebars"],
                 "input_height": "50px"
