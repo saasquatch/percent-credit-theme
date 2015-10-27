@@ -125,7 +125,7 @@
    	            {
 	              "properties" : {
                     "subject" : { "default": "You have reached max level!" },
-                    "themeMapping": { "default": "email/referrer-reward-limit" }
+                    "themeMapping": { "default": "emails/referrer-reward-limit" }
 	              }
 	            },
 	            { "$ref" : "#/definitions/email/definitions/configuration" }
@@ -157,7 +157,7 @@
    	            {
 	              "properties" : {
                     "subject" : { "default": "Congrats! Your monthly {{companyName}} bill is now {{programDetails.referrerRewardDetails.discountPercent}} signed up!" },
-                    "themeMapping": { "default": "email/referral-converted" }
+                    "themeMapping": { "default": "emails/referral-converted" }
 	              }
 	            },
 	            { "$ref" : "#/definitions/email/definitions/configuration" }
@@ -187,7 +187,7 @@
    	            {
 	              "properties" : {
                     "subject" : { "default": "​{{newReferral.referredUser.firstName}}​ helped you get one step closer to saving {{programDetails.referrerRewardDetails.discountPercent}}% on {{companyName}}​!  signed up!" },
-                    "themeMapping": { "default": "email/referral-started" }
+                    "themeMapping": { "default": "emails/referral-started" }
 	              }
 	            },
 	            { "$ref" : "#/definitions/email/definitions/configuration" }
