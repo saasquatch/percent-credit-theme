@@ -156,7 +156,7 @@
 	          "allOf" : [
    	            {
 	              "properties" : {
-                    "subject" : { "default": "Congrats! Your monthly {{companyName}} bill is now {{programDetails.referrerRewardDetails.discountPercent}} signed up!" },
+                    "subject" : { "default": "Congrats! Your monthly {{companyName}} bill is now {{programDetails.referrerRewardDetails.discountPercent}} less!" },
                     "themeMapping": { "default": "emails/referral-converted" }
 	              }
 	            },
@@ -186,7 +186,7 @@
 	          "allOf" : [
    	            {
 	              "properties" : {
-                    "subject" : { "default": "​{{newReferral.referredUser.firstName}}​ helped you get one step closer to saving {{programDetails.referrerRewardDetails.discountPercent}}% on {{companyName}}​!  signed up!" },
+                    "subject" : { "default": "{{newReferral.referredUser.firstName}} helped you get one step closer to saving {{programDetails.referrerRewardDetails.discountPercent}}% on {{companyName}}!" },
                     "themeMapping": { "default": "emails/referral-started" }
 	              }
 	            },
