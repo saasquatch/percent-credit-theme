@@ -135,7 +135,7 @@
 	          "allOf" : [
 	            {
 	              "properties" : {
-	                "headerImageUrl" : { "default" : "//app.referrralsaasquatch.com/referral-converted.png" },
+	                "headerImageUrl" : { "default" : "{{assets 'images/email/reward-limit-header.png'}}" },
 	                "headerTitle" : { "default" : "Reward Limit" },
 	                "headerBody" : { "default" : "You have successfully referred the maximum!" },
 	                "mainBody" : { "default" : "Thanks for spreading the word about {{companyName}}. You’ve referred so many new people that you’ve earned the maximum amount of available credit."},
@@ -167,7 +167,7 @@
 	          "allOf" : [
 	            {
 	              "properties" : {
-	                "headerImageUrl" : { "default" : "//app.referrralsaasquatch.com/referral-converted.png" },
+	                "headerImageUrl" : { "default" : "{{assets 'images/email/referral-converted-header.png'}}" },
 	                "headerTitle" : { "default" : "Congratulations" },
 	                "headerBody" : { "default" : "Your friend has signed up for a {{companyName}} Account!" },
 	                "mainBody" : { "default" : "You have now earned {{programDetails.referrerRewardDetails.discountPercent}} off your next monthly bill. Refer more friends to save even more!" }
@@ -197,7 +197,7 @@
 	          "allOf" : [
 	            {
 	              "properties" : {
-	                "headerImageUrl" : { "default" : "//app.referrralsaasquatch.com/referral-started.png" },
+	                "headerImageUrl" : { "default" : "{{assets 'images/email/referral-started-header.png'}}" },
 	                "headerTitle" : { "default" : "Good News!" },
 	                "headerBody" : { "default" : " Your friend has signed up for a free account with {{companyName}}!" },
 	                "mainBody" : { "default" : "{{convertedReferral.referredUser.firstName}} is currently trying out {{companyName}}. As a thank you from us, if they become a paying user, you will automatically receive a {{programDetails.referrerRewardDetails.discountPercent}} discount!" }
