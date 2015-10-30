@@ -286,7 +286,7 @@
             "mainBody": {
               "type": "string",
               "title" : "Main Body",
-              "format": "textarea",
+              "format": "markdown",
               "propertyOrder": 4,
               "options": {
               	"validate": ["handlebars"],
