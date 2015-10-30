@@ -94,7 +94,7 @@
         "headerDetails": {
           "type": "string",
           "minLength": 1,
-          "format": "textarea",
+          "format": "markdown",
           "title": "Body Text:",
           "default" : "Share {{programDetails.referredRewardDetails.discountPercent}}% off {{companyName}} and receive {{programDetails.referrerRewardDetails.discountPercent}}% off your monthly bill when they pay their first bill.",
           "options": {
