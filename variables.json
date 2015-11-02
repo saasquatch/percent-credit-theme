@@ -235,7 +235,10 @@
               "format": "email",
               "default": "referral@mail.saasquat.ch",
               "propertyOrder": 2,
-              "minLength": 5
+              "minLength": 5,
+              "options": {
+                "validate": ["email"]
+              }
             },
             "subject": {
               "type": "string",
