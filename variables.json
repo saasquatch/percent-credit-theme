@@ -83,7 +83,7 @@
         "heading": {
           "type": "string",
           "minLength": 1,
-          "format": "textarea",
+          "format": "markdown",
           "title": "Heading Text:",
           "default" : "Give {{programDetails.referredRewardDetails.discountPercent}}% off and Get {{programDetails.referrerRewardDetails.discountPercent}}% off!",
           "options": {
@@ -104,7 +104,7 @@
         },
         "shareCodeDetails": {
           "type": "string",
-          "format": "textarea",
+          "format": "markdown",
           "title": "Call To Action Text",
           "default": "Share the link below or use the code {{user.referralCode}}",
           "options": {
