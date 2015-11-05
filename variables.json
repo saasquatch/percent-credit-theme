@@ -138,7 +138,7 @@
 	                "headerImageUrl" : { "default" : "{{assets 'images/email/reward-limit-header.png'}}" },
 	                "headerContent" : { "default" : "##Reward Limit\nYou have successfully referred the maximum!" },
 	                "bodyContent" : { "default" : "Thanks for spreading the word about {{companyName}}. You’ve referred so many new people that you’ve earned the maximum amount of available credit."},
-			"shareCTA" : { "default" : "However, you can keep referring new users and giving {{programDetails.referrerRewardDetails.discountPercent}} off with your code. - **{{user.referralCode}}**\n[{{shareLinks.shareLink}}]({{shareLinks.shareLink}})" }
+			"shareCTA" : { "default" : "However, you can keep referring new users and giving {{programDetails.referrerRewardDetails.discountPercent}} off with your code. - **{{user.referralCode}}**\n\n[{{shareLinks.shareLink}}]({{shareLinks.shareLink}})" }
                       }
 	            },
 	            { "$ref" : "#/definitions/email/definitions/generalContent" },
@@ -306,7 +306,7 @@
               "title" : "Share Code CTA",
               "format" : "markdown",
               "propertyOrder": 4,
-              "default" : "Keep sharing your code and earn more discounts - **{{user.referralCode}}**\n[{{shareLinks.shareLink}}]({{shareLinks.shareLink}})",
+              "default" : "Keep sharing your code and earn more discounts - **{{user.referralCode}}**\n\n[{{shareLinks.shareLink}}]({{shareLinks.shareLink}})",
               "options": {
                 "validate": ["handlebars"],
                 "input_height": "50px"
