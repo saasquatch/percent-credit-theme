@@ -220,7 +220,31 @@ subject: {{variables 'email.REFERRAL_CONVERTED.configuration.subject'}}
       }
     }
   </style>
-
+<style type="text/css" media="only screen and (max-width: 768px)">
+    /*
+    *--------------------------------------------------------
+    *
+    *   Mobile Styles
+    *
+    *--------------------------------------------------------
+    *
+    */
+    @media only screen and (max-width: 768px) {
+      table[class~="hide-desktop"] {
+        max-height: none !important;
+        display: block !important;
+        font-size: 16px !important;
+      }
+      table[class~="hide-mobile"] {
+        max-height: 0;    /* Gmail */
+        display: none;    /* Generic */
+        font-size: 0;
+      }
+      td[class~="mobile-block"] {
+        width: 152px;
+      }
+    }
+  </style>
   <style type="text/css" media="only screen and (max-width: 480px)">
 
     /*
@@ -415,7 +439,7 @@ subject: {{variables 'email.REFERRAL_CONVERTED.configuration.subject'}}
                   <td class="social-buttons">
                     <!--[if !gte mso 9]><!-- -->
                       <div class="hide-desktop">
-                        <a class="social-button sms hide" href="sms:&body={{urlencode (variables 'shareMessaging.twitterShareBody')}}">SMS</a>
+                        <a class="social-button sms hide" href="sms:&body=Hello there">SMS</a>
                       </div>
                     <!--<![endif]-->
 
