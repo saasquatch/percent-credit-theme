@@ -439,7 +439,7 @@ subject: {{variables 'email.REFERRAL_CONVERTED.configuration.subject'}}
                   <td class="social-buttons">
                     <!--[if !gte mso 9]><!-- -->
                       <div class="hide-desktop">
-                        <a class="social-button sms hide" href="sms:&body={{urlencode (variables 'shareMessaging.twitterShareBody')}}">SMS</a>
+                        <a class="social-button sms hide" href="sms:&body={{urlencode (variables 'shareMessaging.twitterShareBody') space="%20"}}">SMS</a>
                       </div>
                     <!--<![endif]-->
 
