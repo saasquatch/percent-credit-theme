@@ -315,7 +315,7 @@
             "hasShareLink" : {
             	"type" : "boolean",
             	"format" : "checkbox",
-            	"title" : "Has Share Link",
+            	"title" : "Enable Share Link",
             	"propertyOrder": 5,
             	"default" : true
             },
