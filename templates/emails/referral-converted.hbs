@@ -1,19 +1,18 @@
 ---
-from: {{variables 'email.REFERRAL_CONVERTED.configuration.fromName'}}
-fromName: {{variables 'email.REFERRAL_CONVERTED.configuration.fromAddress'}}
+from: {{variables 'email.REFERRAL_CONVERTED.configuration.fromAddress'}}
+fromName: {{variables 'email.REFERRAL_CONVERTED.configuration.fromName'}}
 subject: {{variables 'email.REFERRAL_CONVERTED.configuration.subject'}}
 ---
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <base target="_blank">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Referral SaaSquatch Template</title>
 
   <style type="text/css">
 
-    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+    @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
     /*
     *--------------------------------------------------------
@@ -71,17 +70,13 @@ subject: {{variables 'email.REFERRAL_CONVERTED.configuration.subject'}}
       line-height: 1.5;
     }
 
-    .header-text,
-    .header.component h2 {
-      margin: 0;
+    .header-text {
       font-size: 36px;
       color: #4797d2;
       font-weight: bold;
     }
 
-    .sub-header,
-    .header.component p {
-      margin: 0;
+    .sub-header {
       font-size: 18px;
       color: #121212;
     }
@@ -91,13 +86,11 @@ subject: {{variables 'email.REFERRAL_CONVERTED.configuration.subject'}}
       color: #141414;
     }
 
-    .accent-text,
-    .content.component a {
+    .accent-text {
       color: #4797d2 !important;
     }
 
-    .background-colored,
-    .content.component a {
+    .background-colored {
       background-color: #f2f2f2;
       border: 1px solid #ececec;
     }
@@ -162,18 +155,8 @@ subject: {{variables 'email.REFERRAL_CONVERTED.configuration.subject'}}
     *
     */
 
-    .content-code,
-    .content.component p {
+    .content-code {
       padding: 25px 0;
-    }
-
-    .content.component p:nth-child(odd) {
-      padding: 0;
-    }
-
-    .content.component .content-body p {
-      padding: 0;
-      margin: 0;
     }
 
     .link-widget {
@@ -182,16 +165,11 @@ subject: {{variables 'email.REFERRAL_CONVERTED.configuration.subject'}}
       border-collapse: separate !important;
     }
 
-    .link-content,
-    .content.component a {
+    .link-content {
       padding: 13px 0;
       border-radius: 7px;
       font-weight: bold;
       text-decoration: none !important;
-    }
-
-    .content.component a {
-      padding: 14px 33px;
     }
 
 
@@ -242,9 +220,7 @@ subject: {{variables 'email.REFERRAL_CONVERTED.configuration.subject'}}
       }
     }
   </style>
-
-  <style type="text/css" media="only screen and (max-width: 768px)">
-
+<style type="text/css" media="only screen and (max-width: 768px)">
     /*
     *--------------------------------------------------------
     *
@@ -253,30 +229,22 @@ subject: {{variables 'email.REFERRAL_CONVERTED.configuration.subject'}}
     *--------------------------------------------------------
     *
     */
-
     @media only screen and (max-width: 768px) {
-
       table[class~="hide-desktop"] {
         max-height: none !important;
         display: block !important;
         font-size: 16px !important;
       }
-
       table[class~="hide-mobile"] {
         max-height: 0;    /* Gmail */
         display: none;    /* Generic */
         font-size: 0;
       }
-
       td[class~="mobile-block"] {
         width: 152px;
       }
-
-
     }
-
   </style>
-
   <style type="text/css" media="only screen and (max-width: 480px)">
 
     /*
@@ -304,8 +272,7 @@ subject: {{variables 'email.REFERRAL_CONVERTED.configuration.subject'}}
         padding: 25px !important;
       }
 
-      td[class~="header-text"],
-      .header.component h2{
+      td[class~="header-text"] {
         font-size: 30px !important;
       }
 
@@ -340,12 +307,11 @@ subject: {{variables 'email.REFERRAL_CONVERTED.configuration.subject'}}
         line-height: 39px !important;
         padding-bottom: 10px !important;
         position: relative !important;
-        background-image: url({{assets 'images/social_mobile_17.jpg'}});
+          background-image: url({{assets 'images/social_mobile_17.jpg'}});
         background-repeat: no-repeat;
         border-radius: 7px;
         display: inline-block;
       }
-
       span[class~="mobile-hide"] {
         max-height: 0 !important;    /* Gmail */
         display: none !important;    /* Generic */
@@ -353,21 +319,14 @@ subject: {{variables 'email.REFERRAL_CONVERTED.configuration.subject'}}
         overflow: hidden !important; /* Generic */
         font-size: 0 !important;
       }
-
       a[class~="twitter"] {
         background-image: url({{assets 'images/social_mobile_22.jpg'}}) !important;
       }
-
       a[class~="facebook"] {
         background-image: url({{assets 'images/social_mobile_20.jpg'}}) !important;
       }
-
       a[class~="email"] {
         background-image: url({{assets 'images/social_mobile_grey_20.jpg'}}) !important;
-      }
-
-      .content.component a {
-        padding: 14px 38px;
       }
 
     }
@@ -427,7 +386,7 @@ subject: {{variables 'email.REFERRAL_CONVERTED.configuration.subject'}}
   *
   *
   -->
-  <tr>
+   <tr>
     <td align="center" valign="top" width="100%" style="background-color: #ffffff;" class="border-bottom">
       <center>
         <table cellspacing="0" cellpadding="0" width="500" class="w320">
@@ -464,7 +423,7 @@ subject: {{variables 'email.REFERRAL_CONVERTED.configuration.subject'}}
   *
   *
   -->
-  <tr>
+   <tr>
     <td align="center" valign="top" width="100%" style="background-color: #ffffff;">
       <center>
         <table cellspacing="0" cellpadding="0" width="500" class="w320">
@@ -480,7 +439,7 @@ subject: {{variables 'email.REFERRAL_CONVERTED.configuration.subject'}}
                   <td class="social-buttons">
                     <!--[if !gte mso 9]><!-- -->
                       <div class="hide-desktop">
-                        <a class="social-button sms hide" href="sms:&body={{urlencode (variables 'shareMessaging.twitterShareBody')}}">SMS</a>
+                        <a class="social-button sms hide" href="sms:&body={{urlencode (variables 'shareMessaging.twitterShareBody') space="%20"}}">SMS</a>
                       </div>
                     <!--<![endif]-->
 
@@ -490,12 +449,12 @@ subject: {{variables 'email.REFERRAL_CONVERTED.configuration.subject'}}
                         <td class="mobile-block">
                           <div>
                             <!--[if mso]>
-                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="twitter://post?message={{urlencode (variables 'shareMessaging.twitterShareBody')}}" style="height:39px;v-text-anchor:middle;width:136px;" arcsize="18%" stroke="f" fill="t">
+                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="twitter://post?message={{urlencode (variables 'shareMessaging.twitterShareBody') space="%20"}}" style="height:39px;v-text-anchor:middle;width:136px;" arcsize="18%" stroke="f" fill="t">
                               <v:fill type="tile" src="{{assets 'images/social_07.jpg'}}" color="#0089b6" />
                               <w:anchorlock/>
                               <center style="color:#ffffff;font-family:sans-serif;font-size:16px;font-weight:400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tweet</center>
                             </v:roundrect>
-                            <![endif]--><a class="social-button twitter" href="twitter://post?message={{urlencode (variables 'shareMessaging.twitterShareBody')}}"
+                            <![endif]--><a class="social-button twitter" href="twitter://post?message={{urlencode (variables 'shareMessaging.twitterShareBody') space="%20"}}"
                             style="background-color:#0089b6;background-image:url({{assets 'images/social_07.jpg'}});border-radius:7px;color:#ffffff;display:inline-block;font-family:'Open-Sans',Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:39px;text-align:center;text-decoration:none;width:136px;-webkit-text-size-adjust:none;mso-hide:all;"><span class="mobile-hide">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Tweet</a>
                           </div>
                         </td>
@@ -595,7 +554,7 @@ subject: {{variables 'email.REFERRAL_CONVERTED.configuration.subject'}}
   *
   *
   -->
-  <tr>
+    <tr>
     <td align="center" valign="top" width="100%" style="background-color: #ffffff;">
       <center>
         <table cellspacing="0" cellpadding="0" width="500" class="w320">

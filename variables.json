@@ -34,7 +34,7 @@
           "type": "string",
           "description": "Twitter share body",
           "minLength": 4,
-          "default": "Sign up for a {{companyName}} account and we both get {{programDetails.referredRewardDetails.discountPercent}}% off our monthly bill. Use this link {{shareLinks.twitterShareLink}}"
+          "default": "Sign up for a {{companyName}} account and we both get {{programDetails.referredRewardDetails.discountPercent}}%25 off our monthly bill. Use this link {{shareLinks.twitterShareLink}}"
         }
       },
       "required": ["emailShareBody", "emailShareSubject", "facebookShareSubject", "facebookShareBody", "twitterShareBody"]
@@ -312,11 +312,18 @@
                 "input_height": "50px"
               }
             },
+            "hasShareLink" : {
+            	"type" : "boolean",
+            	"format" : "checkbox",
+            	"title" : "Enable Share Link",
+            	"propertyOrder": 5,
+            	"default" : true
+            },
             "shareButtonHeader" : {
               "type" : "string",
               "title" : "Share Button Header",
               "format" : "markdown",
-              "propertyOrder": 5,
+              "propertyOrder": 6,
               "default" : "Refer and Earn a {{programDetails.referredRewardDetails.discountPercent}}% Discount",
               "options": {
                 "validate": ["handlebars"],
