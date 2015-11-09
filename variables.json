@@ -312,11 +312,18 @@
                 "input_height": "50px"
               }
             },
+            "hasShareLink" : {
+            	"type" : "boolean",
+            	"format" : "checkbox",
+            	"title" : "Has Share Link",
+            	"propertyOrder": 5,
+            	"default" : true
+            },
             "shareButtonHeader" : {
               "type" : "string",
               "title" : "Share Button Header",
               "format" : "markdown",
-              "propertyOrder": 5,
+              "propertyOrder": 6,
               "default" : "Refer and Earn a {{programDetails.referredRewardDetails.discountPercent}}% Discount",
               "options": {
                 "validate": ["handlebars"],
