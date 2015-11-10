@@ -136,7 +136,7 @@
 	            {
 	              "properties" : {
 	                "headerImageUrl" : { "default" : "{{assets 'images/email/reward-limit-header.png'}}" },
-	                "headerContent" : { "default" : "##Reward Limit\nYou have successfully referred the maximum!" },
+	                "headerContent" : { "default" : "#Reward Limit\nYou have successfully referred the maximum!" },
 	                "bodyContent" : { "default" : "Thanks for spreading the word about {{companyName}}. You’ve referred so many new people that you’ve earned the maximum amount of available credit."},
 			"shareCTA" : { "default" : "However, you can keep referring new users and giving {{programDetails.referrerRewardDetails.discountPercent}} off with your code. - **{{user.referralCode}}**" }
                       }
@@ -166,7 +166,7 @@
 	            {
 	              "properties" : {
 	                "headerImageUrl" : { "default" : "{{assets 'images/email/referral-converted-header.png'}}" },
-	                "headerContent" : { "default" : "##Congratulations\nYour friend has signed up for a {{companyName}} Account!" },
+	                "headerContent" : { "default" : "#Congratulations\nYour friend has signed up for a {{companyName}} Account!" },
 	                "bodyContent" : { "default" : "You have now earned {{programDetails.referrerRewardDetails.discountPercent}} off your next monthly bill. Refer more friends to save even more!" }
 	              }
 	            },
@@ -195,7 +195,7 @@
 	            {
 	              "properties" : {
 	                "headerImageUrl" : { "default" : "{{assets 'images/email/referral-started-header.png'}}" },
-	                "headerContent" : { "default" : "##Good News!\nYour friend has signed up for a free account with {{companyName}}!" },
+	                "headerContent" : { "default" : "#Good News!\nYour friend has signed up for a free account with {{companyName}}!" },
 	                "bodyContent" : { "default" : "{{newReferral.referredUser.firstName}} is currently trying out {{companyName}}. As a thank you from us, if they become a paying user, you will automatically receive a {{programDetails.referrerRewardDetails.discountPercent}} discount!" }
 	              }
 	            },
