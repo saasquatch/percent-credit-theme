@@ -44,8 +44,10 @@
       </tr>
     {{/each}}
 
-    {{#each rewardResource.MANUAL}}
-      {{reward}}
+    {{#each rewardsBySource.MANUAL}}
+      <tr id="{{#if ../referredBy.dateReferred}}{{math @index '+ 1'}}{{else}}{{math @index}}{{/if}}">
+        {{reward}}
+      </tr>
     {{/each}}
   </table>
 </div>
