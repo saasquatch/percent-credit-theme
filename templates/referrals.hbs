@@ -45,8 +45,8 @@
     {{/each}}
 
     {{#each rewardsBySource.MANUAL}}
-      <tr id="{{#if ../referredBy.dateReferred}}{{math @index '+ 1'}}{{else}}{{math @index}}{{/if}}">
-        {{reward}}
+      <tr id="{{math @index '+ ' referralsLength}}">
+        {{reward.type}}
       </tr>
     {{/each}}
   </table>
