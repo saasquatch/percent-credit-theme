@@ -6,7 +6,7 @@
   class="squatch-referrals"
   id="squatch-referrals-scroll"
   data-scroll-offset="0"
-  data-scroll-limit="{{#if referredBy.dateReferred}}{{math referralsLength '+ 1 + ' rewardsLength}}{{else}}{{math referralsLength '+' rewardsLength}}{{/if}}">
+  data-scroll-limit="{{#if referredBy.dateReferred}}{{math referralsLength '+ 1'}}{{else}}{{math referralsLength '+' rewardsLength}}{{/if}}">
 
   <table class="squatch-referrals-list">
     {{#if referredBy.referredByUser}}
@@ -48,12 +48,11 @@
       <tr id="{{math @index '+ 1 + ' referralsLength}}">
         {{#block
           "arbitraryReward"
-          referral=""
           description="No Referral"
           heading="Applied"
           dateReferred=dateGiven}}
 
-          {{> programs/PCT_DISCOUNT/referral}}
+          {{> programs/PCT_DISCOUNT/reward}}
         {{/block}}
       </tr>
     {{/each}}

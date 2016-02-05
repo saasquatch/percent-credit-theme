@@ -1,25 +1,13 @@
 <td>
-  {{#if referral.imageUrl}}
-    <img class="img-circle squatch-referrals-avatar" src="{{referral.imageUrl}}">
-  {{else}}
-    <img class="img-circle squatch-referrals-avatar" src="{{gravatar referral.email default="mm" rating="pg" size=40 secure=isSecureUrl}}">
-  {{/if}}
+  <img class="img-circle squatch-referrals-avatar" src="{{gravatar referral.email default="mm" rating="pg" size=40 secure=isSecureUrl}}">
 
   <div class="squatch-referrals-heading">
-    {{referral.firstName}}
+    MANUAL ENTRY
   </div>
 
   <div class="squatch-referrals-description">
     <span class="hidden-sm">
-      {{#if description}}
-        {{description}}
-      {{else}}
-        {{#if paid}}
-          Paid User
-        {{else}}
-          Trial User
-        {{/if}}
-      {{/if}}
+      {{description}}
     </span>
 
     <span class="hidden-md
@@ -40,15 +28,7 @@
 
 <td class="hidden-sm">
   <div class="squatch-referrals-heading">
-    {{#if heading}}
-      {{heading}}
-    {{else}}
-      {{#if paid}}
-        Signed Up
-      {{else}}
-        Referred
-      {{/if}}
-    {{/if}}
+    {{heading}}
   </div>
 
   <div class="squatch-referrals-description" data-moment="true">{{dateReferred}}</div>
