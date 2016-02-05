@@ -24,7 +24,12 @@
   <i class="icon squatch-referrals-icon icon-ok-circled text-green"></i>
 
   <div class="squatch-referrals-heading hidden-sm">
-    {{value}} {{unit}}
+    {{#if (stringCompare type "CREDIT")}}
+        {{math value '/ 100'}} Dollars
+    {{else}}
+      {{type}}
+      <!-- {{value}} {{unit}} -->
+    {{/if}}
   </div>
 
   <div class="squatch-referrals-description hidden-sm text-green">
