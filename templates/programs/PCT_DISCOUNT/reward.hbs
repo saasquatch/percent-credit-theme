@@ -24,9 +24,8 @@
   <i class="icon squatch-referrals-icon icon-ok-circled text-green"></i>
 
   <div class="squatch-referrals-heading hidden-sm">
-    {{#if (stringCompare type "CREDIT" emptyOnFalse=true)}}
-        <!-- {{math value '/ 100'}} Dollars -->
-        {{type}}
+    {{#if (stringCompare unit "CENTS" emptyOnFalse=true)}}
+        {{math value '/ 100'}} Dollars
     {{else}}
       {{value}} {{unit}}
     {{/if}}
