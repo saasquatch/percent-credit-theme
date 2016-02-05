@@ -11,18 +11,14 @@
 
     scrollElements = $('[data-scroll-element]');
 
-    console.log(scrollElements);
-
     inValidRange = function(offset, limit) {
       return offset >= 0 && offset < limit;
     };
 
     setVisibility = function(element, nextOffset, limit) {
       if(inValidRange(nextOffset, limit)) {
-        console.log("Remove class disabled");
         element.removeClass('disabled');
       } else {
-        console.log("Add class disabled");
         element.addClass('disabled');
       }
     };
@@ -90,9 +86,6 @@
       $this.data('scroll-limit', limit);
 
       nextOffset = offset + increment;
-
-      console.log(nextOffset + ' ' + limit);
-
       setVisibility($this, nextOffset, limit);
 
       // Force IE to forget previous scroll top value
