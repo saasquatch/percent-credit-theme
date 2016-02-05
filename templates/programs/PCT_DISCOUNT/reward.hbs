@@ -25,7 +25,8 @@
 
   <div class="squatch-referrals-heading hidden-sm">
     {{#if (stringCompare type "CREDIT" emptyOnFalse=true)}}
-        {{math value '/ 100'}} Dollars
+        <!-- {{math value '/ 100'}} Dollars -->
+        {{type}}
     {{else}}
       {{value}} {{unit}}
     {{/if}}
