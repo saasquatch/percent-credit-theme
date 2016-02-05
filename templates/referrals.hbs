@@ -45,23 +45,18 @@
     {{/each}}
 
     {{#each rewardsBySource.MANUAL}}
-      {{#if discountPercent}}
-        <tr id="{{math @index '+ 1 + ' referralsLength}}">
-          {{#block
-            "arbitraryReward"
-            description="No Referral"
-            heading="Applied"
-            unit=unit
-            discount=discountPercent
-            credit=""
-            dateGiven=dateGiven}}
+      <tr id="{{math @index '+ 1 + ' referralsLength}}">
+        {{#block
+          "arbitraryReward"
+          description="No Referral"
+          heading="Applied"
+          unit=unit
+          value=value
+          dateGiven=dateGiven}}
 
-            {{> programs/PCT_DISCOUNT/reward}}
-          {{/block}}
-        </tr>
-      {{else}}
-
-      {{/if}}
+          {{> programs/PCT_DISCOUNT/reward}}
+        {{/block}}
+      </tr>
     {{/each}}
   </table>
 </div>
