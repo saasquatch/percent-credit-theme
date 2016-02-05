@@ -2,26 +2,12 @@
   <img class="img-circle squatch-referrals-avatar" src="{{gravatar referral.email default="mm" rating="pg" size=40 secure=isSecureUrl}}">
 
   <div class="squatch-referrals-heading">
-    MANUAL ENTRY
+    Manual Reward
   </div>
 
   <div class="squatch-referrals-description">
     <span class="hidden-sm">
       {{description}}
-    </span>
-
-    <span class="hidden-md
-      {{#if paid}}
-        text-green
-      {{else}}
-        text-yellow
-      {{/if}}
-    ">
-      {{#if paid}}
-        Discount Earned
-      {{else}}
-        Discount Pending
-      {{/if}}
     </span>
   </div>
 </td>
@@ -35,37 +21,13 @@
 </td>
 
 <td>
-  <i class="icon squatch-referrals-icon
-    {{#if paid}}
-      icon-ok-circled text-green
-    {{else}}
-      icon-attention text-yellow
-    {{/if}}
-  "></i>
+  <i class="icon squatch-referrals-icon icon-ok-circled text-green"></i>
 
   <div class="squatch-referrals-heading hidden-sm">
-    {{#if paid}}
-      {{#if referred}}
-        {{programDetails.referrerRewardDetails.discountPercent}}%
-      {{else}}
-        {{programDetails.referredRewardDetails.discountPercent}}%
-      {{/if}}
-    {{else}}
-      Trial Signup
-    {{/if}}
+    {{rewardName}}
   </div>
 
-  <div class="squatch-referrals-description hidden-sm
-    {{#if paid}}
-      text-green
-    {{else}}
-      text-yellow
-    {{/if}}
-  ">
-    {{#if paid}}
-      Discount Earned
-    {{else}}
-      Discount Pending
-    {{/if}}
+  <div class="squatch-referrals-description hidden-sm text-green">
+    Reward Given
   </div>
 </td>
