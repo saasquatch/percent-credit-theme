@@ -46,9 +46,15 @@
 
     {{#each rewardsBySource.MANUAL}}
       <tr id="{{math @index '+ 1 + ' referralsLength}}">
-        <td>
-          {{type}}
-        </td>
+        {{#block
+          "arbitraryReward"
+          referral=""
+          description="No Referral"
+          heading="Applied"
+          dateReferred=dateGiven}}
+
+          {{> programs/PCT_DISCOUNT/referral}}
+        {{/block}}
       </tr>
     {{/each}}
   </table>
