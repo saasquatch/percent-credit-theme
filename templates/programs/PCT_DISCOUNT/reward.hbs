@@ -17,14 +17,18 @@
     {{heading}}
   </div>
 
-  <div class="squatch-referrals-description" data-moment="true">{{dateReferred}}</div>
+  <div class="squatch-referrals-description" data-moment="true">{{reward.dateGiven}}</div>
 </td>
 
 <td>
   <i class="icon squatch-referrals-icon icon-ok-circled text-green"></i>
 
   <div class="squatch-referrals-heading hidden-sm">
-    {{rewardName}}
+    {{#if reward.discountPercent}}
+      {{reward.discountPercent}} {{reward.unit}}
+    {{else}}
+      {{reward.assignedCredit}} {{reward.unit}}
+    {{/if}}
   </div>
 
   <div class="squatch-referrals-description hidden-sm text-green">
