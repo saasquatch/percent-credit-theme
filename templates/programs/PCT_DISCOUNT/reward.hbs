@@ -27,8 +27,7 @@
     {{#if (stringCompare type "CREDIT" emptyOnFalse=true)}}
         {{math value '/ 100'}} Dollars
     {{else}}
-      {{type}}
-      <!-- {{value}} {{unit}} -->
+      {{value}} {{unit}}
     {{/if}}
   </div>
 
