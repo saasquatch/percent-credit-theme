@@ -13,7 +13,7 @@
         <div class="progress-bar" style="width:100%"></div>
       </div>
 
-      {{#if discountRewardBalance}}{{discountRewardBalance}}{{else}}0{{/if}}% Active discount
+      {{#if discountRewardBalance.totalDiscountPercent}}{{discountRewardBalance.totalDiscountPercent}}{{else}}0{{/if}}% Active discount
     </div>
 
     <div class="squatch-progress-legend-item">
@@ -21,7 +21,7 @@
         <div class="progress-bar" style="width:0%"></div>
       </div>
 
-      {{#if discountRewardBalance}}nothing{{else}}100{{/if}}% Discount available
+      {{#if discountRewardBalance.totalDiscountPercent}}{{math '100 - ' discountRewardBalance.totalDiscountPercent}}{{else}}100{{/if}}% Discount available
     </div>
   </div>
 </div>
