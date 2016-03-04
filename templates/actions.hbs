@@ -1,6 +1,8 @@
-<div class="squatch-actions" data-referrals="{{#if referredBy.dateReferred}}{{math referralsLength '+ 1'}}{{else}}{{referralsLength}}{{/if}}"
+<div class="squatch-actions" data-referrals="{{#if referredBy.dateReferred}}{{#if referredBy.hasCancelledReferredReward}}{{nonCancelledReferralAndRewardsListLength}}{{else}}{{math nonCancelledReferralAndRewardsListLength '+ 1'}}{{/if}}{{else}}{{nonCancelledReferralAndRewardsListLength}}{{/if}}"
   {{#unless referredBy.dateReferred}}
-    data-referredBy="0"
+    {{#if referredBy.hasCancelledReferredReward}}
+      data-referredBy="0"
+    {{/if}}
   {{/unless}}
 >
   <button data-open-panel="#squatch-panel" class="btn btn-default
