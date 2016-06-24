@@ -28,6 +28,7 @@
     // TODO - the new widget.js will override this onload so when analytics v2 goes live this file can be removed
     if(typeof window.onload != 'function') {
       window.onload = function () {
+        console.log("LEGACY");
         jsRoutes.saasquatch.controllers.widget.SquatchWidgetController.recordWidgetEvent(squatch.analytics.attributes.tenant, squatch.analytics.attributes.accountId, squatch.analytics.attributes.userId, squatch.analytics.events.OPENED_WIDGET).ajax({
           success: function(data){
             _log('Event Recorded');
