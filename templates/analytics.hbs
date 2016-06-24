@@ -4,7 +4,7 @@
 
 --}}
 
-{{#if (stringCompare mode "MOBILE" emptyOnFalse=true)}}
+{{#if (stringCompare mode "HOSTED" emptyOnFalse=true)}}
   <script>
 
     /**
@@ -26,7 +26,6 @@
     analytics.identify(squatch.analytics.user.ident, squatch.analytics.user.traits);
 
     // TODO - the new widget.js will override this onload so when analytics v2 goes live this file can be removed
-    console.log("ONLOAD: " + (typeof window.onload));
     if(typeof window.onload != 'function') {
       window.onload = function () {
         console.log("LEGACY");
