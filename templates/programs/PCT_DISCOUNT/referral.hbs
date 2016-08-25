@@ -65,10 +65,14 @@
 
   <div class="squatch-referrals-heading hidden-sm">
     {{#if paid}}
-      {{#if referred}}
-        {{programDetails.referrerRewardDetails.discountPercent}}%
+      {{#if reward.value}}
+        {{reward.value}}%
       {{else}}
-        {{programDetails.referredRewardDetails.discountPercent}}%
+        {{#if referred}}
+          {{programDetails.referrerRewardDetails.discountPercent}}%
+        {{else}}
+          {{programDetails.referredRewardDetails.discountPercent}}%
+        {{/if}}
       {{/if}}
     {{else}}
       Trial Signup
