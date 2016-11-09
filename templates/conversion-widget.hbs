@@ -6,14 +6,14 @@
     <base target="_self">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Referral SaaSquatch Dollar Credit Theme</title>
+    <title>Referral SaaSquatch Percent Discount Theme</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
     <link rel="stylesheet" href="{{assets 'css/conversion-widget.css'}}">
 
-    {{> programs/CREDIT/theme_messages}}
+    {{> programs/PCT_DISCOUNT/theme_messages}}
     {{squatchHead}}
     <script src="{{assets 'javascript/base.js'}}"></script>
     <script src="{{assets 'javascript/events.js'}}"></script>
@@ -47,12 +47,13 @@
           <img src={{variables 'widget.CONVERSION_WIDGET.content.widgetCustomization.widgetHeaderImage'}}>
         </div>
 
-        {{> programs/CREDIT/conversion-title}}
+        {{> programs/PCT_DISCOUNT/conversion-title}}
 
         <button class="close squatch-header-close" data-close-panel="#squatch-panel">Close</button>
 
         {{#if referredBy}}
-          {{> programs/CREDIT/conversion-lead}}
+          {{> programs/
+          /conversion-lead}}
           {{> conversion-share}}
         {{/if}}
       </div>
