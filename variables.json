@@ -313,7 +313,7 @@
                       "default":"Thanks for spreading the word about {{companyName}}. You've referred so many new people that you've earned the maximum amount of available credit."
                     },
                     "shareCTA":{
-                      "shareCTA" : "default" : "However, you can keep referring new users and giving {{programDetails.referrerRewardDetails.discountPercent}}% off with your code. - **{{user.referralCode}}**"
+                      "default" : "However, you can keep referring new users and giving {{programDetails.referrerRewardDetails.discountPercent}}% off with your code. - **{{user.referralCode}}**"
                     }
                   }
                 },
@@ -358,7 +358,7 @@
                       "default":"#Congratulations\nYour friend has signed up for a {{companyName}} Account!"
                     },
                     "bodyContent":{
-                      "bodyContent" : { "default" : "You have now earned {{programDetails.referrerRewardDetails.discountPercent}}% off your next monthly bill. Refer more friends to save even more!"
+                      "default" : "You have now earned {{programDetails.referrerRewardDetails.discountPercent}}% off your next monthly bill. Refer more friends to save even more!"
                     }
                   }
                 },
