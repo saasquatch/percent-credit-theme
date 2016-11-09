@@ -313,7 +313,7 @@
                       "default":"Thanks for spreading the word about {{companyName}}. You've referred so many new people that you've earned the maximum amount of available credit."
                     },
                     "shareCTA":{
-                      "shareCTA" : { "default" : "However, you can keep referring new users and giving {{programDetails.referrerRewardDetails.discountPercent}}% off with your code. - **{{user.referralCode}}**"
+                      "shareCTA" : "default" : "However, you can keep referring new users and giving {{programDetails.referrerRewardDetails.discountPercent}}% off with your code. - **{{user.referralCode}}**"
                     }
                   }
                 },
