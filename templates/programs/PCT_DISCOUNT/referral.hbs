@@ -6,7 +6,7 @@
   {{/if}}
 
   <div class="squatch-referrals-heading">
-    {{referral.firstName}}
+    {{stringEmptyHandler referral.firstName onEmpty="Anonymous"}}
   </div>
 
   <div class="squatch-referrals-description">
