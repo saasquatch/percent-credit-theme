@@ -126,6 +126,9 @@
 	      "showAsCTA":{
                 "type": "boolean"
 	      },
+	      "displayOnLoad":{
+                "type": "boolean"
+	      },
               "widgetType":{
                 "type":"string",
                 "enum":[
