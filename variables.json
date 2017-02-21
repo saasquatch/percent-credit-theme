@@ -131,7 +131,8 @@
                                     "emailShareSubject",
                                     "facebookShareSubject",
                                     "facebookShareBody",
-                                    "twitterShareBody"
+                                    "twitterShareBody",
+									"smsShareBody"
                                  ]
                               }
                            ]
@@ -493,7 +494,13 @@
                            "description":"Twitter share body",
                            "minLength":4,
                            "default":"Sign up for a {{companyName}} account and we both get {{programDetails.referredRewardDetails.discountPercent}}% off our monthly bill. Use this link {{shareLinks.twitterShareLink}}"
-                        }
+                        },
+						"smsShareBody":{
+						   "type":"string",
+						   "description":"SMS share body",
+						   "minLength:4,
+						   "default":"Sign up for a {{companyName}} account and we both get {{programDetails.referredRewardDetails.discountPercent}}% off our monthly bill. Use this link {{sharelinks.smsShareLink}}"
+						}
                      }
                   }
                }
