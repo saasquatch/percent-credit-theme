@@ -465,6 +465,7 @@
                      "properties":{
                         "EMAIL":{
                            "type":"object",
+                           "title":"Email",
                            "properties":{
                               "emailShareSubject":{
                                 "type":"string",
@@ -501,6 +502,7 @@
                         },
                         "FACEBOOK":{
                            "type":"object",
+                           "title":"Facebook",
                            "properties":{
                               "facebookShareImageURL":{
                                  "type":"string",
@@ -542,6 +544,7 @@
                         },
                         "FBMESSENGER":{
                            "type":"object",
+                           "title":"Facebook Messenger",
                            "properties":{
                               "facebookDisplayRule":{
                                  "type":"string",
@@ -562,6 +565,7 @@
                         },
                         "TWITTER":{
                            "type":"object",
+                           "title":"Twitter",
                            "properties":{
                               "twitterShareBody":{
                                 "type":"string",
@@ -592,6 +596,7 @@
                         },
                         "SMS":{
                            "type":"object",
+                           "title":"SMS",
                            "properties":{
                               "smsShareBody":{
                                 "type":"string",
@@ -618,6 +623,7 @@
                         },
                         "WHATSAPP":{
                            "type":"object",
+                           "title":"WhatsApp",
                            "properties":{
                               "whatsAppShareBody":{
                                  "type":"string",
