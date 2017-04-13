@@ -4,7 +4,7 @@
       "vendor":"referral-saasquatch",
       "name":"rs_schema",
       "format":"jsonschema",
-      "version":"1-1-0"
+      "version":"1-2-0"
    },
    "type":"object",
    "properties":{
@@ -133,20 +133,10 @@
                               }
                            ]
                         },
-                        "shareMessaging":{
+                        "sharingOptions":{
                            "allOf":[
                               {
                                  "$ref":"#/definitions/widget/definitions/content/definitions/shareContent"
-                              },
-                              {
-                                 "required":[
-                                    "emailShareBody",
-                                    "emailShareSubject",
-                                    "facebookShareSubject",
-                                    "facebookShareBody",
-                                    "twitterShareBody",
-                                    "smsShareBody"
-                                 ]
                               }
                            ]
                         }
@@ -473,46 +463,190 @@
                      "title":"Share Messaging",
                      "type":"object",
                      "properties":{
-                        "emailShareSubject":{
-                           "type":"string",
-                           "description":"Email share subject",
-                           "minLength":4,
-                           "default":"Get {{companyName}} for {{programDetails.referredRewardDetails.discountPercent}}% less!"
+                        "EMAIL":{
+                           "type":"object",
+                           "title":"Email",
+                           "properties":{
+                              "emailShareSubject":{
+                                "type":"string",
+                                "description":"Email share subject",
+                                "minLength":4,
+                                "default":"Get {{companyName}} for {{programDetails.referredRewardDetails.discountPercent}}% less!"
+                              },
+                              "emailShareBody":{
+                                 "type":"string",
+                                 "description":"Email share body",
+                                 "minLength":4,
+                                 "default":"Sign up for a {{companyName}} account and we both get {{programDetails.referredRewardDetails.discountPercent}}% off our monthly bill. Use this link {{shareLinks.emailShareLink}}"
+                              },
+                              "emailDisplayRule":{
+                                 "type":"string",
+                                 "title":"Display rule",
+                                 "default":"mobile-and-desktop",
+                                 "enum":[
+                                    "mobile-and-desktop",
+                                    "hidden",
+                                    "mobile-only",
+                                    "desktop-only"
+                                 ],
+                                 "options":{
+                                    "enum_titles":[
+                                       "Show",
+                                       "Hide",
+                                       "Mobile Only",
+                                       "Desktop Only"
+                                    ]
+                                 }
+                              }
+                           }
                         },
-                        "emailShareBody":{
-                           "type":"string",
-                           "description":"Email share body",
-                           "minLength":4,
-                           "default":"Sign up for a {{companyName}} account and we both get {{programDetails.referredRewardDetails.discountPercent}}% off our monthly bill. Use this link {{shareLinks.emailShareLink}}"
+                        "FACEBOOK":{
+                           "type":"object",
+                           "title":"Facebook",
+                           "properties":{
+                              "facebookShareImageURL":{
+                                 "type":"string",
+                                 "title":"Facebook URL Image",
+                                 "default":""
+                              },
+                              "facebookShareSubject":{
+                                 "type":"string",
+                                 "description":"Facebook share subject",
+                                 "minLength":4,
+                                 "default":"Get {{companyName}} for {{programDetails.referredRewardDetails.discountPercent}}% less!"
+                              },
+                              "facebookShareBody":{
+                                 "type":"string",
+                                 "description":"Facebook share subject",
+                                 "minLength":4,
+                                 "default":"Sign up for a {{companyName}} account and we both get {{programDetails.referredRewardDetails.discountPercent}}% off our monthly bill. Use this link {{shareLinks.facebookShareLink}}"
+                              },
+                              "facebookDisplayRule":{
+                                 "type":"string",
+                                 "title":"Display rule",
+                                 "default":"mobile-and-desktop",
+                                 "enum":[
+                                    "mobile-and-desktop",
+                                    "hidden",
+                                    "mobile-only",
+                                    "desktop-only"
+                                 ],
+                                 "options":{
+                                    "enum_titles":[
+                                       "Show",
+                                       "Hide",
+                                       "Mobile Only",
+                                       "Desktop Only"
+                                    ]
+                                 }
+                              }
+                           }
                         },
-                        "facebookShareImageURL":{
-                           "type":"string",
-                           "description":"Facebook URL Image",
-                           "default":""
+                        "FBMESSENGER":{
+                           "type":"object",
+                           "title":"Messenger",
+                           "properties":{
+                              "facebookDisplayRule":{
+                                 "type":"string",
+                                 "title":"Display rule",
+                                 "default":"desktop-only",
+                                 "enum":[
+                                    "hidden",
+                                    "desktop-only"
+                                 ],
+                                 "options":{
+                                    "enum_titles":[
+                                       "Hide",
+                                       "Desktop Only"
+                                    ]
+                                 }
+                              }
+                           }
                         },
-                        "facebookShareSubject":{
-                           "type":"string",
-                           "description":"Facebook share subject",
-                           "minLength":4,
-                           "default":"Get {{companyName}} for {{programDetails.referredRewardDetails.discountPercent}}% less!"
+                        "TWITTER":{
+                           "type":"object",
+                           "title":"Twitter",
+                           "properties":{
+                              "twitterShareBody":{
+                                "type":"string",
+                                "description":"Twitter share body",
+                                "minLength":4,
+                                "default":"Sign up for a {{companyName}} account and we both get {{programDetails.referredRewardDetails.discountPercent}}% off our monthly bill. Use this link {{shareLinks.twitterShareLink}}"
+                              },
+                              "twitterDisplayRule":{
+                                 "type":"string",
+                                 "title":"Display rule",
+                                 "default":"hidden",
+                                 "enum":[
+                                    "mobile-and-desktop",
+                                    "hidden",
+                                    "mobile-only",
+                                    "desktop-only"
+                                 ],
+                                 "options":{
+                                    "enum_titles":[
+                                       "Show",
+                                       "Hide",
+                                       "Mobile Only",
+                                       "Desktop Only"
+                                    ]
+                                 }
+                              }
+                           }
                         },
-                        "facebookShareBody":{
-                           "type":"string",
-                           "description":"Facebook share subject",
-                           "minLength":4,
-                           "default":"Sign up for a {{companyName}} account and we both get {{programDetails.referredRewardDetails.discountPercent}}% off our monthly bill. Use this link {{shareLinks.facebookShareLink}}"
+                        "SMS":{
+                           "type":"object",
+                           "title":"SMS",
+                           "properties":{
+                              "smsShareBody":{
+                                "type":"string",
+                                "description":"SMS share body",
+                                "minLength":4,
+                                "default":"Sign up for a {{companyName}} account and we both get {{programDetails.referredRewardDetails.discountPercent}}% off our monthly bill. Use this link {{share-link 'SMS'}}"
+                              },
+                              "smsDisplayRule":{
+                                 "type":"string",
+                                 "title":"Display rule",
+                                 "default":"mobile-only",
+                                 "enum":[
+                                    "hidden",
+                                    "mobile-only"
+                                 ],
+                                 "options":{
+                                    "enum_titles":[
+                                       "Hide",
+                                       "Mobile Only"
+                                    ]
+                                 }
+                              }
+                           }
                         },
-                        "twitterShareBody":{
-                           "type":"string",
-                           "description":"Twitter share body",
-                           "minLength":4,
-                           "default":"Sign up for a {{companyName}} account and we both get {{programDetails.referredRewardDetails.discountPercent}}% off our monthly bill. Use this link {{shareLinks.twitterShareLink}}"
-                        },
-                        "smsShareBody":{
-                           "type":"string",
-                           "description":"SMS share body",
-                           "minLength":4,
-                           "default":"Sign up for a {{companyName}} account and we both get {{programDetails.referredRewardDetails.discountPercent}}% off our monthly bill. Use this link {{share-link 'SMS'}}"
+                        "WHATSAPP":{
+                           "type":"object",
+                           "title":"WhatsApp",
+                           "properties":{
+                              "whatsAppShareBody":{
+                                 "type":"string",
+                                 "title":"WhatsApp share body",
+                                 "minLength":4,
+                                 "default":"Sign up for a {{companyName}} account and we both get {{programDetails.referredRewardDetails.discountPercent}}% off our monthly bill. Use this link {{share-link 'WHATSAPP'}}"
+                              },
+                              "whatsappDisplayRule":{
+                                 "type":"string",
+                                 "title":"Display rule",
+                                 "default":"mobile-only",
+                                 "enum":[
+                                    "hidden",
+                                    "mobile-only"
+                                 ],
+                                 "options":{
+                                    "enum_titles":[
+                                       "Hide",
+                                       "Mobile Only"
+                                    ]
+                                 }
+                              }
+                           }
                         }
                      }
                   }
