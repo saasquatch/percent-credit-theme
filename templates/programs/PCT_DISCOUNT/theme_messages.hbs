@@ -43,19 +43,19 @@
       message: '{{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.TWITTER.twitterShareBody')}}'
     },
     mobile: {
-      sharelink : '{{shareLinks.shareLink}}',
-      emailBody: '{{urlencode (stringFormat "Sign up for a %s account and we both get $%s free credit. Use this link %s" companyName (math programDetails.referredRewardDetails.credit ' / 100') shareLinks.mobileEmailShareLink)}}',
-      facebookBody: '{{urlencode (stringFormat "Sign up for a %s account and we both get $%s free credit. Use this link %s" companyName (math programDetails.referredRewardDetails.credit ' / 100') shareLinks.mobileFacebookShareLink)}}',
+      sharelink: '{{shareLinks.shareLink}}',
+      emailBody: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName programDetails.referredRewardDetails.discountPercent shareLinks.mobileEmailShareLink)}}',
+      facebookBody: '{{urlencode (stringFormat "Sign up for a %s account and we both get %s%% off our monthly bill. Use this link %s" companyName programDetails.referredRewardDetails.discountPercent shareLinks.mobileFacebookShareLink)}}',
       twitterBody: '{{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.TWITTER.twitterShareBody') space="%20"}}',
-      twitterShareLink : '{{shareLinks.mobileTwitterShareLink}}',
-      facebookShareLink : '{{shareLinks.mobileFacebookShareLink}}',
+      twitterShareLink: '{{shareLinks.mobileTwitterShareLink}}',
+      facebookShareLink: '{{shareLinks.mobileFacebookShareLink}}',
       emailShareLink: '{{shareLinks.mobileEmailShareLink}}'
     },
     sms: {
       body: '{{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.SMS.smsShareBody') space="%20"}}'
     },
     whatsapp: {
-      body: '{{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.SMS.smsShareBody') space="%20"}}'
+      body: '{{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.WHATSAPP.whatsAppShareBody') space="%20"}}'
     },
     fallbackImg: 'https://www.gravatar.com/avatar/0?d=blank'
   };
