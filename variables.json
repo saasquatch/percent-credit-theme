@@ -469,7 +469,7 @@
                            "properties":{
                               "emailShareSubject":{
                                 "type":"string",
-                                "description":"Email share subject",
+                                "title":"Email share subject",
                                 "minLength":4,
                                 "format":"textarea",
                                 "default":"Get {{companyName}} for {{programDetails.referredRewardDetails.discountPercent}}% less!",
@@ -482,7 +482,7 @@
                               },
                               "emailShareBody":{
                                  "type":"string",
-                                 "description":"Email share body",
+                                 "title":"Email share body",
                                  "minLength":4,
                                  "format":"textarea",
                                  "default":"Sign up for a {{companyName}} account and we both get {{programDetails.referredRewardDetails.discountPercent}}% off our monthly bill. Use this link {{shareLinks.emailShareLink}}",
