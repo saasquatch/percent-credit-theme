@@ -525,7 +525,7 @@
                               },
                               "facebookShareSubject":{
                                  "type":"string",
-                                 "description":"Facebook share subject",
+                                 "title":"Facebook share subject",
                                  "minLength":4,
                                  "format":"textarea",
                                  "default":"Get {{companyName}} for {{programDetails.referredRewardDetails.discountPercent}}% less!",
@@ -538,7 +538,7 @@
                               },
                               "facebookShareBody":{
                                  "type":"string",
-                                 "description":"Facebook share body",
+                                 "title":"Facebook share body",
                                  "minLength":4,
                                  "format":"textarea",
                                  "default":"Sign up for a {{companyName}} account and we both get {{programDetails.referredRewardDetails.discountPercent}}% off our monthly bill. Use this link {{shareLinks.facebookShareLink}}",
@@ -597,7 +597,7 @@
                            "properties":{
                               "twitterShareBody":{
                                 "type":"string",
-                                "description":"Twitter share body",
+                                "title":"Twitter share body",
                                 "minLength":4,
                                 "format":"textarea",
                                 "default":"Sign up for a {{companyName}} account and we both get {{programDetails.referredRewardDetails.discountPercent}}% off our monthly bill. Use this link {{shareLinks.twitterShareLink}}",
@@ -635,7 +635,7 @@
                            "properties":{
                               "smsShareBody":{
                                 "type":"string",
-                                "description":"SMS share body",
+                                "title":"SMS share body",
                                 "minLength":4,
                                 "format":"textarea",
                                 "default":"Sign up for a {{companyName}} account and we both get {{programDetails.referredRewardDetails.discountPercent}}% off our monthly bill. Use this link {{share-link 'SMS'}}",
