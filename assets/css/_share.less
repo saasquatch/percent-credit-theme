@@ -1,7 +1,7 @@
 .squatch-share {
   > .form-group {
     @media (max-width: @screen-sm-max) {
-      margin-bottom: 5px;
+      margin-bottom: @grid-gutter-width;
     }
   }
 }
@@ -52,6 +52,7 @@
 
     @media (max-width: @screen-sm-max) {
       margin-left: 0;
+      margin-top: @grid-gutter-width;
     }
   }
 
@@ -61,58 +62,41 @@
 
   @media (max-width: @screen-sm-max) {
     width: 100%;
-    margin-top: @grid-gutter-width;
   }
 }
 
-.emailShare,
-.fbShare,
-.twShare {
+.twShare, .fbShare {
+  display: block;
 
-  &.hidden {
+  @media (max-width: @screen-sm-max) {
     display: none;
   }
 
-  &.mobile-only {
+  @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+    /* For portrait layouts only */
     display: none;
-
-    @media (max-width: @screen-sm-max) {
-      display: block;
-    }
   }
 
-  &.desktop-only {
-    @media (max-width: @screen-sm-max) {
-      display: none;
-    }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+    /* For landscape layouts only */
+    display: none;
   }
 }
 
-.messengerShare {
+.twMobile, .fbMobile {
+  display: none;
 
-  &.hidden {
-    display: none;
+  @media (max-width: @screen-sm-max) {
+    display: block;
   }
 
-  &.desktop-only {
-    @media (max-width: @screen-sm-max) {
-      display: none;
-    }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+    /* For portrait layouts only */
+    display: block;
   }
-}
-
-.smsShare,
-.whatsappShare {
-
-  &.hidden {
-    display: none;
-  }
-
-  &.mobile-only {
-    display: none;
-
-    @media (max-width: @screen-sm-max) {
-      display: block;
-    }
+  
+  @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+    /* For landscape layouts only */
+    display: block;
   }
 }
