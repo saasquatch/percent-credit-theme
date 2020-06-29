@@ -19,10 +19,10 @@
   {{!-- TODO: Switch the second line below out with the line directly below when we've updated to Handlebars.java 2.2.0 --}}
   {{!-- {{> (stringFormat 'programs/%s/theme_messages' programDetails.referredRewardDetails.rewardType) }} --}}
   {{> programs/PCT_DISCOUNT/theme_messages}}
-  {{squatchHead}}
+  {{!-- {{squatchHead}} --}}
   {{> analytics}}
-  <script src="https://localhost:5000/assets/javascripts/jquery-1.9.0.min.js"></script>
-  <script src="https://localhost:5000/assets/javascripts/v1-compat.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script src="{{ assets 'javascripts/v1-compat.js' }}"></script>
 
   <!--[if lt IE 9]>
       <script src="{{assets 'libs/bind-polyfill.js'}}"></script>
