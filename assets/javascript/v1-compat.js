@@ -310,7 +310,8 @@ $(function () {
   });
 
   $("body").on("touchstart click", ".close", function (e) {
-    rpc.close();
+    if (window.frameElement && window.frameElement.squatchJsApi) {
+      window.frameElement.squatchJsApi.close();;
   });
 
   $("body").on("touchstart click", ".copy", function (e) {
